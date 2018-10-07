@@ -47,6 +47,7 @@ html, body {
 .card {
     margin-top: -15%;
     box-shadow: 5px 10px 50px gray;
+    margin-bottom: 15%;
 }
 
 .card-title {
@@ -59,25 +60,13 @@ html, body {
     font-size: calc(12px + 0.6vw)
 }
 
-
 /*projects*/
 .projects {
-    margin-top: 5%;
+    margin-top: 30px;
 }
 
 .project {
-    margin-bottom: 5%;
-}
-
-.project-subtitle {
-    text-transform: uppercase;
-    color: #515151;
-    font-family: San-Fransisco-Black;
-    min-font-size: 100px;
-    font-size: calc(12px + 0.8vw)
-    max-font-size: 30px;
-    width: auto;
-    display: inline-block;
+    margin-bottom: 10%;
 }
 
 .project-title {
@@ -92,8 +81,17 @@ html, body {
     max-font-size: 20px;
 }
 
+.project-subtitle {
+    text-transform: uppercase;
+    color: #515151;
+    font-family: San-Fransisco-Black;
+    font-size: calc(12px + 0.7vw);
+    width: auto;
+    display: inline-block;
+}
+
 .btn {
-    box-shadow: 5px 5px 15px lightgray;
+    box-shadow: 5px 5px 1% lightgray;
     margin: 5px 5px 15px;
     background-color: #29D442;
 }
