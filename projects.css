@@ -75,6 +75,7 @@ html, body {
 .btn-text {
     color: white;
     font-family: San-Fransisco-Medium;
+    font-size: calc(12px + 0.3vw);
 }
 
 .project-screenshot {
