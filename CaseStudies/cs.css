@@ -1,0 +1,127 @@
+@font-face{
+    font-family: San-Fransisco-Black;
+    src: url("../fonts/SF-Pro-Display-Black.otf");
+}
+
+@font-face{
+    font-family: San-Fransisco-Medium;
+    src: url("../fonts/SF-Pro-Display-Medium.otf");
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/*navbar*/
+.nav-item {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: white;
+}
+
+.nav-item-icon {
+    position:relative;
+    top:4px;
+    margin: 5px;
+}
+
+/*cs*/
+.head-image {
+    margin-top: 80px;
+}
+
+
+.head-title {
+    font-family: San-Fransisco-Black;
+    font-size: calc(15px + 1.2vw);
+    max-font-size: 50px;
+}
+
+.cs-body, .cs-head {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.cs-head {
+    margin-top: 40px;
+}
+
+.cs-body {
+    margin-bottom: 5%;
+}
+
+.head-image {
+    width: 100%;
+    max-width: 1920px;
+    max-height: 1080px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 25px;
+}
+
+.head-subtitle {
+    text-transform: uppercase;
+    color: #515151;
+    font-family: San-Fransisco-Black;
+    min-font-size: 100px;
+    font-size: calc(12px + 0.8vw);
+    margin-top: 10px;
+}
+
+.body-title {
+    font-family: San-Fransisco-Black;
+    font-size: calc(15px + 0.8vw);
+    max-font-size: 50px;
+}
+
+.body-text {
+    font-family: San-Fransisco-Medium;
+    font-size: calc(12px + 0.5vw);
+    max-font-size: 20px;
+}
+
+.screenshot {
+    width: 40%;
+    margin: 20px;
+}
+
+/*button*/
+.btn {
+    box-shadow: 5px 5px/**/ 15px lightgray;
+    margin: 5px 5px 15px;
+    background-color: #29D442;
+}
+
+.btn-text {
+    color: white;
+    font-family: San-Fransisco-Medium;
+    font-size: calc(12px + 0.3vw);
+}
+
+/*contact*/
+.contact {
+    width: 70%;
+    margin-bottom: 5%;
+}
+
+.contact-title {
+    font-family: San-Fransisco-Black;
+    font-size: calc(12px + 1.5vw);
+    text-align: center;
+}
+
+.contact-btn {
+    margin: 5px;
+    font-size: calc(12px + 1.2vw);
+    width: 100%;
+}
+
+/*footer*/
+footer {
+    position: relative;
+    text-align: center;
+    margin-top: 0;
+    clear: both;
+    color: #515151;
+}
