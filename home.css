@@ -8,24 +8,6 @@
     src: url("fonts/SF-Pro-Display-Medium.otf");
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
-/*navbar*/
-.nav-item {
-    text-transform: uppercase;
-    font-weight: 600;
-    color: white;
-}
-
-.nav-item-icon {
-    position:relative;
-    top:4px;
-    margin: 5px;
-}
-
 /*hero*/
 .hero {
     width: 100%;
@@ -69,45 +51,12 @@ html, body {
     margin-bottom: 10%;
 }
 
-.project-title {
-    font-family: San-Fransisco-Black;
-    font-size: calc(15px + 1.2vw);
-    max-font-size: 50px;
-}
-
-.project-text {
-    font-family: San-Fransisco-Medium;
-    font-size: calc(12px + 0.7vw);
-    max-font-size: 20px;
-}
-
-.project-subtitle {
-    text-transform: uppercase;
-    color: #515151;
-    font-family: San-Fransisco-Black;
-    font-size: calc(12px + 0.7vw);
-    width: auto;
-    display: inline-block;
-}
-
-.btn {
-    box-shadow: 5px 5px 1% lightgray;
-    margin: 5px 5px 15px;
-    background-color: #29D442;
-}
-
 .buttons {
     float: right;
     display: block;
     margin-right: 0;
     margin-left: auto;
     margin-top: 0;
-}
-
-.btn-text {
-    font-family: San-Fransisco-Medium;
-    color: white;
-    font-size: calc(12px + 0.3vw);
 }
 
 .project-screenshot {
@@ -117,31 +66,4 @@ html, body {
     margin-right: auto;
     margin-left: auto;
     border-radius: 25px;
-}
-
-/*contact*/
-.contact {
-    width: 70%;
-    margin-bottom: 5%;
-}
-
-.contact-title {
-    font-family: San-Fransisco-Black;
-    font-size: calc(12px + 1.5vw);
-    text-align: center;
-}
-
-.contact-btn {
-    margin: 5px;
-    font-size: calc(12px + 1.2vw);
-    width: 100%;
-}
-
-/*footer*/
-footer {
-    position: relative;
-    text-align: center;
-    margin-top: 0;
-    clear: both;
-    color: #515151;
 }
