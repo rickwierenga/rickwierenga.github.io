@@ -145,3 +145,8 @@ h1, h2, h3 {
     display: table-cell;
 }
 
+/* footer */
+footer {
+    text-align: center;
+    color: gray;
+}
