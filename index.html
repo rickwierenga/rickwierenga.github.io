@@ -1,13 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Home - Rick Wierenga</title>
 
     <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" type="text/css">
 </head>
-<body>
+<body class="container text-white">
+    <section id="hero" class="fullscreen">
+        <div class="hero-items">
+            <div id="hero-titles">
+                <h1 class="header">Rick Wierenga</h1>
+                <h3 class="sub-header">Aspiring Software Engineer</h3>
+            </div>
+            <div class="hero-buttons">
+                <a href="#projects"><button type="button" class="btn hero-project-btn">Projects</button></a>
+                <a href="#contact"><button type="button" class="btn hero-contact-btn">Contact</button></a>
+            </div>
+        </div>
+    </section>
 
+    <section id="projects" class="">
+        <h2 class="section-header project-header">Projects</h2>
+
+        <div class="project row">
+            <div class="project-img-container col-md-6 col-sm-12">
+                <img src="images/heros/WaterPi.png" alt=WaterPi" class="project-hero-img">
+            </div>
+            <div class="project-info col-md-6 col-sm-12">
+                <h3 class="project-header">WaterPi</h3>
+                <p class="project-description">WaterPi is a combination on software and hardware to measure water quality using a Raspberry Pi.  WaterPi was created for an O en O (O and O) project for Technasium on Melanchton Bergschenhoek.</p>
+                <div class="project-skills row">
+                    <div class="skill-container col"><img src="images/skills/python.png" alt="python" class="project-skill"></div>
+                    <div class="skill-container col"><img src="images/skills/ubuntu.png" alt="python" class="project-skill"></div>
+                    <div class="skill-container col"><img src="images/skills/matplotlib.png" alt="python" class="project-skill"></div>
+                    <div class="skill-container col"><img src="images/skills/raspberrypi.png" alt="python" class="project-skill"></div>
+                </div>
+            </div>
+        </div>
+        <div class="project row">
+            <div class="project-img-container col-md-6 col-sm-12">
+                <img src="images/heros/speaktionary.jpg" alt=WaterPi" class="project-hero-img">
+            </div>
+            <div class="project-info col-md-6 col-sm-12">
+                <h3 class="project-header">Speaktionary</h3>
+                <p class="project-description">A dictionary you can speak to! Using the Oxford Dictionaries API Speaktionary can find any English word you can pronounce. Store you definitions for easy reference. Easy yet sophisticated..</p>
+                <div class="project-skills row">
+                    <div class="skill-container col"><img src="images/skills/swift.png" alt="python" class="project-skill"></div>
+                    <div class="skill-container col"><img src="images/skills/api.png" alt="python" class="project-skill"></div>
+                    <div class="skill-container col"><img src="images/skills/oxford-dict.png" alt="python" class="project-skill"></div>
+                    <div class="skill-container col"><img src="images/skills/coredata.png" alt="python" class="project-skill"></div>
+                </div>
+            </div>
+        </div>
+        <div class="project row">
+            <div class="project-img-container col-md-6 col-sm-12">
+                <img src="images/heros/form-spammer.png" alt=WaterPi" class="project-hero-img">
+            </div>
+            <div class="project-info col-md-6 col-sm-12">
+                <h3 class="project-header">Spammer</h3>
+                <p class="project-description">Spam any Google Form! Only for educational purposes. Use with caution!</p>
+                <div class="project-skills row">
+                    <div class="skill-container col"><img src="images/skills/python.png" alt="python" class="project-skill"></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contact" class="fullscreen">
+        <div class="contact-items">
+            <h2 class="section-header">Contact</h2>
+            <h3 class="section-subheader">Let's get in touch.</h3>
+            <div class="contact-buttons">
+                <button type="button" class="btn contact-btn">Email me at rickwierenga@icloud.com</button>
+                <br>
+                <button type="button" class="btn contact-btn">Tweet me at @rickwierenga</button>
+            </div>
+        </div>
+    </section>
 
     <footer><p>&copy2018 - Rick Wierenga</p></footer>
 </body>
