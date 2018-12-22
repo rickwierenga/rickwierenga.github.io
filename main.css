@@ -26,8 +26,12 @@ html, body {
 h1, h2, h3 {
     text-align: center;
     font-family: "GillSansStd" !important;
-    color: blue;
 }
+
+p {
+    font-family: "GillSansStd" !important;
+}
+
 
 .btn {
     background-color: #2D323B;
@@ -38,6 +42,10 @@ h1, h2, h3 {
 
 .section-subheader {
     font-size: 1.5em;
+}
+
+a, a > button {
+    color: #FF5050 !important;
 }
 
 /*hero*/
