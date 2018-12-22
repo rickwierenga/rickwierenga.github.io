@@ -121,6 +121,11 @@ h1, h2, h3 {
     margin: auto;
 }
 
+.more-projects-btn {
+    margin: 30px 10px 10px;
+    width: 100%;
+}
+
 /*contact*/
 #contact {
     display: table;
