@@ -1,78 +1,122 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
-<head>
-    <meta charset="UTF-8">
-    <title>Rick Wierenga - Portfolio</title>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Rick Wierenga - Portfolio</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="main.css" type="text/css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" type="text/css">
-</head>
-<body class="container text-white">
-    <section id="hero" class="fullscreen">
-        <div class="hero-items">
-            <div id="hero-titles">
-                <h1 class="header">Rick Wierenga</h1>
-                <h3 class="sub-header">Aspiring Software Engineer</h3>
+        <link rel="stylesheet" href="main.css" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    </head>
+
+    <body class="container text-white">
+        <section id="hero" class="fullscreen">
+            <div>
+                <h1>Rick Wierenga</h1>
+                <h2>Aspiring Software Developer</h3>
+                <ul>
+                    <li><a href="#projects" class="btn">Projects</a></li>
+                    <li><a href="#contact" class="btn">Contact</a></li>
+                </ul>
             </div>
-            <div class="hero-buttons">
-                <a href="#projects"><button type="button" class="btn hero-project-btn">Projects</button></a>
-                <a href="#contact"><button type="button" class="btn hero-contact-btn">Contact</button></a>
-            </div><!---->
-        </div>
-    </section>
+        </section>
 
-    <section id="projects" class="">
-        <h2 class="section-header project-header">Projects</h2>
-
-        <div class="project row">
-            <div class="project-img-container col-md-6 col-sm-12">
-                <img src="images/heros/WaterPi.png" alt=WaterPi" class="project-hero-img">
-            </div>
-            <div class="project-info col-md-6 col-sm-12">
-                <h3 class="project-header">WaterPi</h3>
-                <p class="project-description">WaterPi is a combination on software and hardware to measure water quality using a Raspberry Pi.  WaterPi was created for an O en O (O and O) project for Technasium on Melanchton Bergschenhoek. <a href="https://github.com/rickwierenga/WaterPi" target="_blank">View this project on GitHub.</a></p>
-                <div class="project-skills row">
-                    <div class="skill-container col"><img src="images/skills/python.png" alt="python" class="project-skill"></div>
-                    <div class="skill-container col"><img src="images/skills/ubuntu.png" alt="python" class="project-skill"></div>
-                    <div class="skill-container col"><img src="images/skills/matplotlib.png" alt="python" class="project-skill"></div>
-                    <div class="skill-container col"><img src="images/skills/raspberrypi.png" alt="python" class="project-skill"></div>
+        <section id="projects">
+            <div class="project showcase">
+                <img src="images/weathywhere.png" alt="Weathywhere">
+                <div>
+                    <h3>Weathywhere</h3>
+                    <p>Weathywhere is a simple iOS app. The user can tap and hold a location on the map to see the weather at that location. It uses the open weather map API to fetch the information.</p>
+                    <a href="https://github.com/rickwierenga/Weathywhere" target="_blank"><i class="fab fa-github-square icon"></i></a>
+                    <!-- <i class="fab fa-app-store-ios icon"></i> -->
                 </div>
             </div>
-        </div>
-        <div class="project row">
-            <div class="project-img-container col-md-6 col-sm-12">
-                <img src="images/heros/speaktionary.jpg" alt=WaterPi" class="project-hero-img">
-            </div>
-            <div class="project-info col-md-6 col-sm-12">
-                <h3 class="project-header">Speaktionary</h3>
-                <p class="project-description">A dictionary you can speak to! Using the Oxford Dictionaries API Speaktionary can find any English word you can pronounce. Store you definitions for easy reference. Easy yet sophisticated. <a href="https://github.com/rickwierenga/Speaktionary" target="_blank">View this project on GitHub.</a></p>
-                <div class="project-skills row">
-                    <div class="skill-container col"><img src="images/skills/swift.png" alt="python" class="project-skill"></div>
-                    <div class="skill-container col"><img src="images/skills/api.png" alt="python" class="project-skill"></div>
-                    <div class="skill-container col"><img src="images/skills/oxford-dict.png" alt="python" class="project-skill"></div>
-                    <div class="skill-container col"><img src="images/skills/coredata.png" alt="python" class="project-skill"></div>
+
+            <div id="projects-container">
+                <div class="project">
+                    <img src="images/equationbalancer.png" alt="EquationBalancer">
+                    <div>
+                        <h3>EquationBalancer</h3>
+                        <p>Balance chemical equations automatically. EquationBalancer uses Matrix algebra to balance the equations extremely fast. The objective was to have a String to String function for balancing equations.</p>
+                        <a href="https://github.com/rickwierenga/EquationBalancer" target="_blank"><i class="fab fa-github-square icon"></i></a>
+                        <!-- <i class="fab fa-app-store-ios icon"></i> -->
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="images/WaterPi.png" alt="WaterPi">
+                    <div>
+                        <h3>WaterPi</h3>
+                        <p>WaterPi is a combination on software and hardware to measure water quality using a Raspberry Pi. WaterPi was created for an O en O (O and O) project for Technasium on Melanchton Bergschenhoek.</p>
+                        <a href="https://github.com/rickwierenga/WaterPi" target="_blank"><i class="fab fa-github-square icon"></i></a>
+                        <!-- <i class="fab fa-app-store-ios icon"></i> -->
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="images/todo.png" alt="ToDo">
+                    <div>
+                        <h3>ToDo</h3>
+                        <p>Manage your GTD system with ease using this simple "to-do list" app.</p>
+                        <a href="https://github.com/rickwierenga/ToDo" target="_blank"><i class="fab fa-github-square icon"></i></a>
+                        <!-- <i class="fab fa-app-store-ios icon"></i> -->
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="images/wip.png" alt="Work in progress" class="project-hero-img">
+                    <div>
+                        <h3>Money</h3>
+                        <p>Handle your personal finances with ease! It's a web app created using Python, Flask, Ninja2, HTML, CSS, JavaScript and Bootstrap.</p>
+                        <a href="https://github.com/rickwierenga/Money" target="_blank"><i class="fab fa-github-square icon"></i></a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="images/speaktionary.jpg" alt="Speaktionary">
+                    <div>
+                        <h3>Speaktionary</h3>
+                        <p>A dictionary you can speak to! Using the Oxford Dictionaries API Speaktionary can find any English word you can pronounce. Store you definitions for easy reference. Easy yet sophisticated.</p>
+                        <a href="https://github.com/rickwierenga/Speaktionary" target="_blank"><i class="fab fa-github-square icon"></i></a>
+                        <!-- <i class="fab fa-app-store-ios icon"></i> -->
+                    </div>
                 </div>
             </div>
-        </div>
-       <div class="row justify-content-center">
-            <div class="col-4">
-                <a href="https://github.com/rickwierenga/" target="_blank"><button type="button" class="btn more-projects-btn">View all my public projects on GitHub</button></a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="fullscreen">
-        <div class="contact-items">
-            <h2 class="section-header">Contact</h2>
-            <h3 class="section-subheader">Let's get in touch.</h3>
-            <div class="contact-buttons">
-                <a href="mailto:rickwierenga@icloud.com?subject=Contact from portfolio"><button type="button" class="btn contact-btn">Email me at rickwierenga@icloud.com</button></a>
-                <br>
-                <a href="https://twitter.com/intent/tweet/" target="_blank"><button type="button" class="btn contact-btn">Tweet me at @rickwierenga</button></a>
+        <section id="contact" class="fullscreen">
+            <div>
+                <h1>Let's get in touch!</h1>
+                <ul>
+                    <li>
+                        <a href="https://www.github.com/rickwierenga"" class="btn-reveal" target="_blank">
+                            <i id="icon" class="fab fa-github"></i>
+                            <p>GitHub</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:rick_wierenga@icloud.com"" class="btn-reveal" target="_blank">
+                            <i id="icon" class="fas fa-envelope"></i>
+                            <p>email</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/intent/tweet/" class="btn-reveal" target="_blank">
+                            <i id="icon" class="fab fa-twitter"></i>
+                            <p>Twitter</p>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </div>
-    </section>
-<a href="altnomore/game.html">game</a>
-    <footer><p>&copy2018 - Rick Wierenga</p></footer>
-</body>
+        </section>
+
+        <footer>
+            <p>&copy2019 - Rick Wierenga</p>
+        </footer>
+
+        <script src="main.js"></script>
+    </body>
 </html>
