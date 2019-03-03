@@ -253,6 +253,9 @@ footer {
     }
 
     /*contact*/
+    #contact {
+      margin-top: 25vh;
+    }
     #contact h1 {
         font-size: 2rem;
         margin-bottom: 15px;
