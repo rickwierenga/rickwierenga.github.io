@@ -103,7 +103,6 @@ a, a > button {
     font-size: 3.5rem;
 }
 
-
 #hero h2 {
     margin-bottom: 1rem;
 }
@@ -140,11 +139,9 @@ a, a > button {
     display: table;
     margin-bottom: 20px;
 }
-
 #projects .project.showcase h3 {
     font-size: 2rem;
 }
-
 #projects .project.showcase > div {
     padding: 20px;
     width: 40%;
@@ -152,7 +149,6 @@ a, a > button {
     display: table-cell;
     vertical-align: middle;
 }
-
 #projects .project.showcase img {
     display: table-cell;
 }
@@ -164,11 +160,9 @@ a, a > button {
     height: auto;
     margin: 10px;
 }
-
 #projects .project h3 {
     margin-bottom: 10px;
 }
-
 #projects img {
     width: 100%; 
     height: auto;
@@ -176,11 +170,9 @@ a, a > button {
 
     transition: all 200ms linear;
 }
-
 #projects .project > div {
     padding: 10px;
 }
-
 #projects .project .icon {
     margin-top: 3px;
     font-size: 32px;
@@ -224,4 +216,45 @@ footer {
     margin-top: -50px;
     text-align: center;
     color: gray;
+}
+
+@media screen and (max-width: 400px) {
+    #hero h1 {
+        font-size: 2rem;
+    }
+    #hero h2 {
+        font-size: 1.5rem;
+    }
+    #hero ul {
+        display: initial;
+        overflow: hidden;
+    }
+    #hero li {
+        float: none;
+        width: 100%;
+        display: block;
+        overflow: hidden;
+    }
+    #hero .btn {
+        width: 90%;
+    }
+
+    #projects-container {
+        grid-template-columns: 100%;
+    }
+
+    #projects .project.showcase {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    #projects .project.showcase h3 {
+        font-size: 1.17rem;
+    }
+
+    /*contact*/
+    #contact h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
 }
