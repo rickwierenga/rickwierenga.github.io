@@ -219,3 +219,99 @@ footer {
     margin-top: 50px;
     padding: 20px;
 }
+
+/* mobile */
+@media screen and (max-width: 800px) {
+    /* components */
+    /* text */
+    .txt {
+        font-size: 14px;
+    }
+
+    a[href="#content"] {
+        display: none;
+    }
+
+    .txt-title {
+        font-size: 40px;
+    }
+
+    .txt-primary {
+        font-size: 20px;
+    }
+
+    .txt-section-title {
+        font-size: 12px;
+    }
+
+    .txt-large {
+        font-size: 20px;
+    }
+
+    .txt-medium {
+        font-size: 16px;
+    }
+
+    .txt-quiet {
+        font-size: 12px;
+    }
+
+    .txt-label {
+        font-size: 10px;
+    }
+
+    .txt-small {
+        font-size: 16px;
+    }
+
+    /* lists */
+    ul li {
+        list-style-type: none;
+    }
+
+    ul.colored li::before {
+        font-size: 1.1em;
+    }
+
+    /* input */
+    input, textarea {
+        font-size: 12px;
+    }
+
+    textarea {
+        height: 165px;
+    }
+
+    /* lay out */
+    section {
+        margin-top: 30px;
+    }
+
+    /* page */
+    .container {
+        max-width: 70%;
+        margin: auto;
+    }
+
+    #content {
+        padding-top: 30px;
+    }
+
+    #hero {
+        height: 60vh;
+        width: 60vw;
+        margin: auto;
+    }
+
+    .hero-txt-container {
+        height: 60vh;
+    }
+
+    .project {
+        margin-top: 20px;
+    }
+
+    .internet-item {
+        margin: 5px 10px;
+    }
+}
