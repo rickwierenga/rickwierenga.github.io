@@ -100,6 +100,7 @@ input[type="text"], textarea {
     width: 100%;
     padding: 10px;
     margin: 5px 0;
+    outline: none;
 }
 
 input[type="submit"] {
@@ -116,6 +117,7 @@ input[type="submit"]:hover {
 
 textarea {
     height: 165px;
+    resize: none;
 }
 
 /* lay out */
@@ -190,6 +192,12 @@ a {
 
 .project-more-img {
     margin: 5px 5px 5px 0;
+    width: 55px;
+    vertical-align: middle;
+}
+
+.project-more-img-as {
+    width: 60px;
 }
 
 .contact-form {
@@ -202,6 +210,12 @@ a {
 
 .internet-container a {
     height: 32px;
+    vertical-align: middle;
+}
+
+.internet-container span {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .internet-container i {
@@ -313,5 +327,13 @@ footer {
 
     .internet-item {
         margin: 5px 10px;
+    }
+
+    input[type="submit"] {
+        background-color: #239CF5;
+        color: white;
+        padding: 10px 15px;
+        margin-top: 5px;
+        margin-right: 5px;
     }
 }
