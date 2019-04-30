@@ -1,124 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Rick Wierenga - Portfolio</title>
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="main.css" type="text/css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Rick Wierenga</title>
+</head>
 
-    <body class="container text-white">
-        <section id="hero" class="fullscreen">
-            <div>
-                <h1>Rick Wierenga</h1>
-                <h2>Aspiring Software Developer</h3>
-                <ul>
-                    <li><a href="#projects" class="btn">Projects</a></li>
-                    <li><a href="#contact" class="btn">Contact</a></li>
+<body>
+    <div id="hero" class="bg-primary">
+        <div class="slide hero-txt-container">
+            <h1 class="txt txt-title animate" data-aos="fade-up">Hello, I'm <span class="clr-primary">Rick
+                    Wierenga</span>.</h1>
+        </div>
+        <div class="wiggle" data-aos="zoom-in" data-aos-offset="0" data-aos-duratino="4000">
+            <a href="#content"><i class="fas fa-chevron-down fa-2x icon-secondary"></i></a>
+        </div>
+    </div>
+
+    <div class="container bg-primary">
+        <div id="content">
+            <section id="about" data-aos="fade-up">
+                <h4 class="txt txt-section-title">about</h4>
+                <p class="txt txt-large">I’m a 16 y/o high school student and <span class="clr-primary">aspiring
+                        software engineer</span> based in the Netherlands. I like solving puzzles and <span
+                        class="clr-primary">learning new things</span>. I’m interested in <span
+                        class="clr-primary">AI</span> and <span class="clr-primary">programming</span>.</p>
+            </section>
+
+            <section id="achievements" data-aos="fade-up">
+                <h4 class="txt txt-section-title">Achievements</h4>
+                <ul class="colored">
+                    <li><span class="txt txt-medium"><i class="fab fa-apple"></i>WWDC19 Scholarship Winner</span></li>
                 </ul>
-            </div>
-        </section>
+            </section>
 
-        <section id="projects">
-            <div class="project showcase">
-                <img src="images/weathywhere.png" alt="Weathywhere">
+            <section id="projects">
+                <h4 class="txt txt-section-title" data-aos="fade-up">Projects</h4>
+                <div class="project" data-aos="fade-up">
+                    <h3 class="txt txt-large txt-clr-primary">Speaktionary</h3>
+                    <p class="txt">Speaktionary is a simple dictionary app for iOS written in Swift. You just say a word
+                        and Speaktionary fetches the definition.</p>
+                        <a href="#"><img class="project-more-img" src="images/download-appstore.png"
+                        alt="Download on the App Store"></a><a href="https://www.github.com/rickwierenga/Speaktionary" target="_blank"><img class="project-more-img" src="images/github.png"
+                        alt="View this project on GitHub"></a>
+                </div>
+                <div class="project" data-aos="fade-up">
+                    <h3 class="txt txt-large txt-clr-primary">Wheathywhere</h3>
+                    <p class="txt">Check the weather at any place you want. Just press and hold the map and the weather
+                        will be shown. Save your favorite location for easy access.</p>
+                        <a href="#"><img class="project-more-img" src="images/download-appstore.png"
+                        alt="Download on the App Store"></a><a href="https://www.github.com/rickwierenga/Wheathywhere" target="_blank"><img class="project-more-img" src="images/github.png"
+                        alt="View this project on GitHub"></a>
+                </div>
+                <div class="project" data-aos="fade-up">
+                    <h3 class="txt txt-large txt-clr-primary">PictionARy</h3>
+                    <p class="txt">An accepted WWDC admission playground. PictionARy is pictionary except that a machine
+                        learning algorithm rates your drawing instead of your friends! You can draw on real paper using
+                        a real felt tip (a black one please).</p>
+                        <a href="#"><img class="project-more-img" src="images/download-appstore.png"
+                        alt="Download on the App Store"></a><a href="https://www.github.com/rickwierenga/PictionARy" target="_blank"><img class="project-more-img" src="images/github.png"
+                        alt="View this project on GitHub"></a>
+                </div>
+                <div class="project" data-aos="fade-up">
+                    <h3 class="txt txt-large txt-clr-primary">Money</h3>
+                    <p class="txt">A web app written in Flask for managing personal finances.</p>
+                    <a href="https://www.github.com/rickwierenga/Money" target="_blank"><img class="project-more-img" src="images/github.png" alt="View this project on GitHub"></a>
+                </div>
+            </section>
+
+            <section id="contact">
+                <div data-aos="fade-up">
+                    <h4 class="txt txt-section-title">Contact</h4>
+                    <h3 class="txt txt-large txt-clr-primary">Let's get in touch!</h3>
+                </div>
+                <form action="https://formspree.io/rick_wierenga@icloud.com" method="POST" class="contact-form" data-aos="fade-up">
+                    <input type="text" placeholder="you&#64;example.com" name="email" autocomplete="_replyto">
+                    <br>
+                    <textarea name="message" placeholder="Hi Rick!"></textarea>
+                    <input type="submit"><!--<input type="checkbox" name="prioritise"><span class="txt txt-label">This email should be prioritised.</span>-->
+                </form>
                 <div>
-                    <h3>Weathywhere</h3>
-                    <div>
-                        <p>Weathywhere is a simple iOS app. The user can tap and hold a location on the map to see the weather at that location. It uses the open weather map API to fetch the information.</p>
-                        <a href="https://github.com/rickwierenga/Weathywhere" target="_blank"><i class="fab fa-github-square icon"></i></a>
-                    </div>
-                    <!-- <i class="fab fa-app-store-ios icon"></i> -->
+                    <p class="txt" data-aos="fade-up" data-aos-offset="200">You can find me elsewhere on the internet:</p>
+                    <ul>
+                        <li class="internet-container" data-aos="fade-right" data-aos-offset="200"><a target="_blank" href="https://www.twitter.com/rickwierenga"><i class="internet-item fab fa-2x fa-twitter" class="contact-icn"></i><span class="internet-item txt">&#64;rickwierenga</span></a></li>
+                        <li class="internet-container" data-aos="fade-right" data-aos-offset="200"><a target="_blank" href="https://www.instagram.com/rickwierenga"><i class="internet-item fab fa-2x fa-instagram" class="contact-icn"></i><span class="internet-item txt">&#64;rickwierenga</span></a></li>
+                        <!--<li class="internet-container" data-aos="fade-right" data-aos-offset="200"><a target="_blank" href="mailto:hi&#64;rickwierenga.com"><i class="internet-item fas fa-2x fa-envelope" class="contact-icn"></i><span class="internet-item txt">hi&#64;rickwierenga.com</span></a></li>-->
+                        <li class="internet-container" data-aos="fade-right" data-aos-offset="200"><a target="_blank" href="https://www.linkedin.com/in/rick-w-0651b6183/"><i class="internet-item fab fa-2x fa-linkedin" class="contact-icn"></i><span class="internet-item txt">Rick Wierenga</span></a></li>
+                        <li class="internet-container" data-aos="fade-right" data-aos-offset="120"><a target="_blank" href="https://www.github.com/rickwierenga"><i class="internet-item fab fa-2x fa-github" class="contact-icn"></i><span class="internet-item txt">&#64;rickwierenga</span></a></li>
+                        <li class="internet-container" data-aos="fade-right" data-aos-offset="120"><a target="_blank" href="https://www.youtube.com/channel/UCTBDbQ72E0WQRQ9gTqxiWmw"><i class="internet-item fab fa-2x fa-youtube" class="contact-icn"></i><span class="internet-item txt">Rick Wierenga</span></a></li>
+                    </ul>
                 </div>
-            </div>
+            </section>
+        </div>
 
-            <div id="projects-container">
-                <div class="project">
-                    <img src="images/equationbalancer.png" alt="EquationBalancer">
-                    <div>
-                        <h3>EquationBalancer</h3>
-                        <p>Balance chemical equations automatically. EquationBalancer uses Matrix algebra to balance the equations extremely fast. The objective was to have a String to String function for balancing equations.</p>
-                        <a href="https://github.com/rickwierenga/EquationBalancer" target="_blank"><i class="fab fa-github-square icon"></i></a>
-                        <!-- <i class="fab fa-app-store-ios icon"></i> -->
-                    </div>
-                </div>
-
-                <div class="project">
-                    <img src="images/WaterPi.png" alt="WaterPi">
-                    <div>
-                        <h3>WaterPi</h3>
-                        <p>WaterPi is a combination on software and hardware to measure water quality using a Raspberry Pi. WaterPi was created for an "O en O project" (Research and Design class) for Technasium on Melanchton Bergschenhoek.</p>
-                        <a href="https://github.com/rickwierenga/WaterPi" target="_blank"><i class="fab fa-github-square icon"></i></a>
-                        <!-- <i class="fab fa-app-store-ios icon"></i> -->
-                    </div>
-                </div>
-
-                <div class="project">
-                    <img src="images/todo.png" alt="ToDo">
-                    <div>
-                        <h3>ToDo</h3>
-                        <p>Manage your GTD system with ease using this simple "to-do list" app.</p>
-                        <a href="https://github.com/rickwierenga/ToDo" target="_blank"><i class="fab fa-github-square icon"></i></a>
-                        <!-- <i class="fab fa-app-store-ios icon"></i> -->
-                    </div>
-                </div>
-
-                <div class="project">
-                    <img src="images/wip.png" alt="Work in progress" class="project-hero-img">
-                    <div>
-                        <h3>Money</h3>
-                        <p>Handle your personal finances with ease! It's a web app created using Python, Flask, Ninja2, HTML, CSS, JavaScript and Bootstrap.</p>
-                        <a href="https://github.com/rickwierenga/Money" target="_blank"><i class="fab fa-github-square icon"></i></a>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <img src="images/speaktionary.jpg" alt="Speaktionary">
-                    <div>
-                        <h3>Speaktionary</h3>
-                        <p>A dictionary you can speak to! Using the Oxford Dictionaries API Speaktionary can find any English word you can pronounce. Store you definitions for easy reference. Easy yet sophisticated.</p>
-                        <a href="https://github.com/rickwierenga/Speaktionary" target="_blank"><i class="fab fa-github-square icon"></i></a>
-                        <!-- <i class="fab fa-app-store-ios icon"></i> -->
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="fullscreen">
-            <div>
-                <h1>Let's get in touch!</h1>
-                <ul>
-                    <li>
-                        <a href="https://www.github.com/rickwierenga"" class="btn-reveal" target="_blank">
-                            <i id="icon" class="fab fa-github"></i>
-                            <p>GitHub</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:rick_wierenga@icloud.com"" class="btn-reveal" target="_blank">
-                            <i id="icon" class="fas fa-envelope"></i>
-                            <p>email</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/intent/tweet/" class="btn-reveal" target="_blank">
-                            <i id="icon" class="fab fa-twitter"></i>
-                            <p>Twitter</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <footer>
-            <p>&copy2019 - Rick Wierenga</p>
+        <footer data-aos="zoom-in" data-aos-offset="0">
+            <p class="txt txt-quiet txt-center">&copy;2019 Rick Wierenga</p>
         </footer>
+    </div>
 
-        <script src="main.js"></script>
-    </body>
+    <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js"
+        integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+</body>
+
 </html>
