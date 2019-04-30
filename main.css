@@ -192,12 +192,12 @@ a {
 
 .project-more-img {
     margin: 5px 5px 5px 0;
-    width: 55px;
+    width: 65px;
     vertical-align: middle;
 }
 
 .project-more-img-as {
-    width: 60px;
+    width: 85px;
 }
 
 .contact-form {
@@ -335,5 +335,15 @@ footer {
         padding: 10px 15px;
         margin-top: 5px;
         margin-right: 5px;
+    }
+
+    .project-more-img {
+    margin: 5px 5px 5px 0;
+    width: 55px;
+    vertical-align: middle;
+    }
+
+    .project-more-img-as {
+        width: 60px;
     }
 }
