@@ -13,8 +13,11 @@ For those of you who don’t know what the World Wide Developer Conference is, l
 Tickets to this event usually cost thousands of dollars; however, for the past few years, students and members of educational institutions have had the chance to go there for free through the WWDC Scholarship Program. This year, applicants were asked to build an Xcode Playground. My Playground is a machine learning version of the popular game Pictionary. In this blog post, I’ll be explaining how I built PictionARy. (Note: I left some things out for brevity)
 
 Before we start, make sure to watch the video if you haven’t done so, so that you know what we are building.
-
-{% youtube "https://www.youtube.com/watch?v=GEUrMbx_uac" %}
+<div class="embed-container">
+    <iframe id="ytplayer" type="text/html" width="640" height="360"
+  src="https://www.youtube.com/embed/GEUrMbx_uac?origin=https://rickwierenga.com"
+  frameborder="0"></iframe>
+</div>
 
 ## Creating up the live camera view
 The main component of the UI is the live view. Let’s start by importing `AVFoundation`. 
