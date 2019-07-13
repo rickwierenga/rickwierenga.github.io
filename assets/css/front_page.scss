@@ -1,0 +1,34 @@
+---
+---
+
+@import "colors";
+
+.about {
+    margin-bottom: 3em;
+}
+
+.categories {
+    hr {
+        margin-bottom: 1.5em;
+    }
+
+    .post-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2.5em;
+        grid-row-gap: 2em;
+        margin-bottom: 3em;
+    }
+
+    .category-title {
+        text-transform: capitalize;
+    }
+}
+
+@media (max-width: 667px) {
+    .categories {
+        .post-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+}

@@ -1,0 +1,112 @@
+---
+---
+
+@import "{{ site.theme }}";
+@import "colors";
+@import "header";
+@import "post";
+@import "card";
+
+// Main
+html { height: 100%; }
+
+body {
+    min-height: 100%;
+    margin: 0; 
+    padding: 0;
+    position: relative;
+}
+
+.container {
+    width: 70%;
+    max-width: 800px;
+    margin: auto;
+}
+
+// Items
+hr {
+    margin-top: 0;
+    margin-bottom: 20px;
+    height: 2px;
+    border: none;
+    background-color: $light-gray;
+}
+
+.social-media {
+    margin: 1.5em auto 0 auto;
+    width: calc((130px * 4) + (2.5em * 3));
+    list-style-type: none;
+    
+    li {
+        display: inline-block;
+    }
+}
+
+// Text styles
+h2.section-title {
+    font-weight: 800;
+    font-size: 1.5em;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+.semi-bold {
+    font-weight: 600;
+}
+
+p.large {
+    font-size: 1.3em;
+}
+
+.accent {
+    color: $accent;
+}
+
+// Footer
+body::after {
+    content: '';
+    display: block;
+    height: 100px;
+}
+
+footer {
+    margin-top: 10em;
+    margin-bottom: 1em;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    p {
+        text-align: center;
+    }
+
+    a, p {
+        color: $text-secondary;
+    }
+
+    p.copyright {
+        color: $text-muted;
+    }
+}
+
+@media (max-width: 667px) {
+    .container {
+        width: 80%;
+    }
+
+    p.large {
+        font-size: 1.2em;
+    }
+
+    .social-media {
+        margin-bottom: 1em;
+    }
+}
+
+@media (max-width: 950px) {
+    .social-media {
+        width: 100%;
+    }
+}

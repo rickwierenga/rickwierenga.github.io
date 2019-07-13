@@ -1,0 +1,57 @@
+---
+permalink: /about
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include head.html %}
+        <link rel="stylesheet" href="/assets/css/about.css">
+    </head>
+
+    <body>
+        {% include header.html %}
+
+        <div class="container">
+            <p class="semi-bold large">My name is Rick Wierenga and I’m a 16 y/o high school student and aspiring software engineer based in the Netherlands. I like solving puzzles and learning new things.</p>
+            <p class="large">If you have any questions, comments or feedback, or just want to say hi, please get in touch on social media:</p>
+            <ul class="social-media">
+                <li>
+                    <a href="https://twitter.com/rickwierenga" target="_blank" class="card contact">
+                        <i class="fa fa-2x fa-twitter twitter"></i>
+                        <p>Twitter</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/rickwierenga" target="_blank" class="card contact">
+                        <i class="fa fa-2x fa-github github"></i>
+                        <p>GitHub</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/channel/UCTBDbQ72E0WQRQ9gTqxiWmw" target="_blank" class="card contact">
+                        <i class="fa fa-2x fa-youtube-play youtube"></i>
+                        <p>YouTube</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/rick-w-0651b6183/" target="_blank" class="card contact">
+                        <i class="fa fa-2x fa-linkedin-square linkedin"></i>
+                        <p>LinkedIn</p>
+                    </a>
+                </li>
+            </ul>
+            <div class="contact-form">
+                <p class="large">You can send me an email by filling out the form or by sending it directly to <a href="mailto:rick_wierenga@icloud.com">rick_wierenga@icloud.com</a>.</p>
+                <form action="https://formspree.io/rick_wierenga@icloud.com" method="POST" data-aos="fade-up">
+                    <input type="text" placeholder="you&#64;example.com" name="email" autocomplete="_replyto">
+                    <br>
+                    <textarea name="message" placeholder="Hi Rick,"></textarea>
+                    <input type="submit"><!--<input type="checkbox" name="prioritise"><span class="txt txt-label">This email should be prioritised.</span>-->
+                </form>
+            </div>
+        </div>
+
+        {% include footer.html %}
+    </body>
+</html>

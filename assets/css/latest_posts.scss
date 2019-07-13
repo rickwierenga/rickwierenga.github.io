@@ -1,0 +1,18 @@
+.latest-posts {
+    margin: 20px 0;
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2em;
+        grid-row-gap: 25px;
+    }
+}
+
+@media (max-width: 667px) {
+	.latest-posts {
+		.grid {
+	        grid-template-columns: 1fr;
+		}
+	}
+}

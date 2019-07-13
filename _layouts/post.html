@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    {% include head.html %}
+    <link href="/assets/css/dracula.css" rel="stylesheet">
+    </head>
+
+    {% include header.html %}
+
+    <body>
+        <div class="container">
+            <div class="post-head">
+                <h1 class="title">{{ page.title }}</h1>
+                <div class="post-details">
+                    <div class="date">
+                        <p>{{ page.date | date: '%B %d, %Y' }}</p>
+                    </div>
+                    {% if page.tags.size > 0 %}
+                    <div class="tags">
+                        <ul>
+                            {% for tag in page.tags %}
+                            <li class="tag"><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <article class="post-content">
+            {{content}}
+            </article>
+
+            <div class="share-twitter">
+                <a href="http://twitter.com/home?status={{ page.title }}%20via%20@rickwierenga%20{{ site.url }}{{ page.url }}" target="_blank" class="tweet">
+                    <i class="fa fa-2x fa-twitter twitter"></i><p>Tweet about this post!</p>
+                </a>
+            </div>
+
+            {% include latest_posts.html %}
+        </div>
+
+        {% include footer.html %}
+    </body>
+</html>
