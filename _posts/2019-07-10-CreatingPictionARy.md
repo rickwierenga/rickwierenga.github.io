@@ -8,7 +8,7 @@ tags:
 
 On April 16th, 2019 an email landed in my inbox. The subject line read: “You’ve been awarded a WWDC19 Scholarship.” What?! Because this was my first time taking part in a programming competition, I didn’t expect to win at all.
 
-For those of you who don’t know what the World Wide Developer Conference is, let me explain it quickly. The World Wide Developer Conference (or WWDC for short) is an annual event organised by Apple for developers. Attendees can meaet face-to-face with the teams behind their favourite products.
+For those of you who don’t know what the World Wide Developer Conference is, let me explain it quickly. The World Wide Developer Conference (or WWDC for short) is an annual event organised by Apple for developers. Attendees can meat face-to-face with the teams behind their favourite products.
 
 Tickets to this event usually cost thousands of dollars; however, for the past few years, students and members of educational institutions have had the chance to go there for free through the WWDC Scholarship Program. This year, applicants were asked to build an Xcode Playground. My Playground is a machine learning version of the popular game Pictionary. In this blog post, I’ll be explaining how I built PictionARy. (Note: I left some things out for brevity)
 
