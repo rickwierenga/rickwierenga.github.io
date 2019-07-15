@@ -20,7 +20,8 @@ function toggleSocialMedia() {
 }
 
 window.onload = function(e){ 
-	if (window.screen.availWidth <= 667) {
+	if (window.innerWidth <= 667) {
 	    social_media.classList.add("hidden");
+	    console.log('yes');
     }
 }
