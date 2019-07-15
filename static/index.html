@@ -13,7 +13,6 @@ permalink: /
         <header>
             <div class="container">
                 <a href="/">
-                    <!-- <img src="/assets/images/logo.png" alt="Logo"> -->
                     <h1 class="title center">Rick Wierenga</h1>
                     <h2 class="subtitle center">A blog about whatever interests me.</h2>
                 </a>
@@ -43,6 +42,12 @@ permalink: /
                             <p>LinkedIn</p>
                         </a>
                     </li>
+                    <li>
+                        <a href="/about">
+                            <i class="fa fa-2x fa-user"></i>
+                            <p>About</p>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </header>
@@ -56,7 +61,6 @@ permalink: /
                     {% for post in category.last %}
                     <a href="{{ post.url }}" class="card post">
                         <span>
-                            
                             <p class="info">
                                 <span class="date">{{ post.date | date_to_string }}</span>
                                 &middot;

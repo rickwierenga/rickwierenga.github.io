@@ -86,11 +86,8 @@ $shadow-color: rgba(184, 184, 184, 0.5);
 }
 
 @media (max-width: 950px) {
-    .social-media > li, .contact.card {
-        width: 100%;
-    }
-
     .contact.card {
+        width: 100%;
         p {
             text-align: center;
             display: table-cell;
