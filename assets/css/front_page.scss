@@ -56,7 +56,13 @@ header {
 }
 
 .social-media {
-    margin-bottom: 2em;
+    a, i {
+        color: white;
+    }
+
+    li {
+        margin: 1em;
+    }
 }
 
 .categories {
