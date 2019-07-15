@@ -64,6 +64,10 @@ p.large {
     color: $accent;
 }
 
+.center {
+    text-align: center;
+}
+
 // Footer
 body::after {
     content: '';

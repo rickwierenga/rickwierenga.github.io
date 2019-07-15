@@ -10,7 +10,44 @@ permalink: /
     </head>
 
     <body>
-        {% include header.html %}
+        <header>
+            <div class="container">
+                <img src="/assets/images/logo.png" alt="Logo">
+                <a href="/">
+                    <h1 class="title center">Rick Wierenga</h1>
+                    <h2 class="subtitle center">A blog about whatever interests me.</h2>
+                </a>
+            </div>
+        </header>
+
+        <div class="container">
+        <ul class="social-media">
+            <li>
+                <a href="https://twitter.com/rickwierenga" target="_blank" class="card contact">
+                    <i class="fa fa-2x fa-twitter twitter"></i>
+                    <p>Twitter</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/rickwierenga" target="_blank" class="card contact">
+                    <i class="fa fa-2x fa-github github"></i>
+                    <p>GitHub</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/channel/UCTBDbQ72E0WQRQ9gTqxiWmw" target="_blank" class="card contact">
+                    <i class="fa fa-2x fa-youtube-play youtube"></i>
+                    <p>YouTube</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/rick-w-0651b6183/" target="_blank" class="card contact">
+                    <i class="fa fa-2x fa-linkedin-square linkedin"></i>
+                    <p>LinkedIn</p>
+                </a>
+            </li>
+        </ul>
+        </div>
 
         <div class="categories container">
             {% for category in site.categories %}
