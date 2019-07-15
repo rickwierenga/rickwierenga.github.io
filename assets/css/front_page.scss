@@ -14,8 +14,7 @@
 
     .post-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 2.5em;
+        grid-template-columns: 1fr;
         grid-row-gap: 2em;
         margin-bottom: 3em;
     }

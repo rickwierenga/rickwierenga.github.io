@@ -53,7 +53,7 @@ $shadow-color: rgba(184, 184, 184, 0.5);
         color: $text-primary;
     }
 
-    .date {
+    .info {
         color: $text-muted;
     }
 
@@ -78,11 +78,7 @@ $shadow-color: rgba(184, 184, 184, 0.5);
 
 .card:hover {
     text-decoration: none;
-    transform: translate(-2px, -5px);
-
-    .read {
-        text-decoration: underline;
-    }
+    transform: scale(1.05);
 }
 
 .card.contact:hover {

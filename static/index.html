@@ -13,46 +13,28 @@ permalink: /
         {% include header.html %}
 
         <div class="categories container">
-            <div class="about">
-                <p class="semi-bold large">My name is Rick Wierenga and I’m a 16 y/o high school student and aspiring software engineer based in the Netherlands. I like solving puzzles and learning new things.</p>
-                <p class="large">On this website I write about things I think are interesting. Some of my favorite topics are Apple, artifical intelligence and math.</p>
-                <ul class="social-media">
-                    <li>
-                        <a href="https://twitter.com/rickwierenga" target="_blank" class="card contact">
-                            <i class="fa fa-2x fa-twitter twitter"></i>
-                            <p>Twitter</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/rickwierenga" target="_blank" class="card contact">
-                            <i class="fa fa-2x fa-github github"></i>
-                            <p>GitHub</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.youtube.com/channel/UCTBDbQ72E0WQRQ9gTqxiWmw" target="_blank" class="card contact">
-                            <i class="fa fa-2x fa-youtube-play youtube"></i>
-                            <p>YouTube</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/rick-w-0651b6183/" target="_blank" class="card contact">
-                            <i class="fa fa-2x fa-linkedin-square linkedin"></i>
-                            <p>LinkedIn</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
             {% for category in site.categories %}
             <div>
                 <h3 class="title semi-bold">All posts about <span class="category-title accent">{{ category | first }}</span></h3>
                 <hr>
                 <div class="post-grid">
                     {% for post in category.last %}
-                    <a href="{{ post.url }}" class="post card">
+                    <a href="{{ post.url }}" class="card post">
                         <span>
-                            <p class="date">{{ post.date | date_to_string }}</p>
+                            
+                            <p class="info">
+                                <span class="date">{{ post.date | date_to_string }}</span>
+                                &middot;
+                                <span class="reading-time" title="Estimated read time">
+                                    {% assign words = post.content | number_of_words %}
+                                    {% if words < 180 %}
+                                    1 min
+                                    {% else %}
+                                    {{ words | divided_by:180 }} mins
+                                    {% endif %}
+                                    read
+                                </span>
+                            </p>
                             <h3>{{ post.title }}</h3>
                             <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
                             <p class="read">Read <i class="fa fa-chevron-right"></i></p>
