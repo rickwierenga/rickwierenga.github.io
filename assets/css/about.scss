@@ -4,7 +4,7 @@
 @import "colors";
 
 .contact-form {
-	margin: 2em 0;
+	margin: 4em 0 2em 0;
 
 	input, textarea {
 		border: none;
@@ -27,6 +27,6 @@
 	input[type="submit"] {
 		color: white;
 		background-color: $accent;
-		padding: 4px;
+		padding: 6px 16px;
 	}
 }
