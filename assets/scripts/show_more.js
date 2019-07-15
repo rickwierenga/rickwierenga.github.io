@@ -5,13 +5,13 @@ var btn_label = document.getElementsByClassName('btn-label')[0];
 
 function toggleSocialMedia() {
 	if (shown) {
-		social_media.classList.remove("hidden");
+		social_media.classList.add("hidden");
 		toggle_icon.classList.remove("fa-chevron-up");
 		toggle_icon.classList.add("fa-chevron-down");
 		btn_label.innerHTML = 'View ';
 		shown = false;
 	} else {
-		social_media.classList.add("hidden");
+		social_media.classList.remove("hidden");
 		toggle_icon.classList.remove("fa-chevron-down");
 		toggle_icon.classList.add("fa-chevron-up");
 		btn_label.innerHTML = 'Hide ';
