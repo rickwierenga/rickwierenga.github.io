@@ -3,10 +3,9 @@ $shadow-color: rgba(184, 184, 184, 0.5);
 .contact.card {
     width: 130px;
     height: 40px;
-    display: table;
+    display: inline-block;
     padding: 8px 0 8px 12px;
     margin: 8px 0.8em;
-    display: inline-block;
     box-shadow: 0 2px 17px $shadow-color;
 
     i, p {
@@ -39,7 +38,6 @@ $shadow-color: rgba(184, 184, 184, 0.5);
 
 .card {
     display: block;
-    overflow: scroll;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 5px 27px $shadow-color;
@@ -85,9 +83,14 @@ $shadow-color: rgba(184, 184, 184, 0.5);
     transform: translate(-1px, -1px);
 }
 
+@media (max-width: 667px) {
+    .social-media > .card-wrapper, .contact.card {
+        width: 97%;
+    }
+}
+
 @media (max-width: 950px) {
     .contact.card {
-        width: 100%;
         p {
             text-align: center;
             display: table-cell;

@@ -79,3 +79,9 @@ header {
         }
     }
 }
+
+@media (max-width: 667px) {
+    .social-media {
+        display: none;
+    }
+}
