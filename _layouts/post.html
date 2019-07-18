@@ -10,21 +10,29 @@
     <body>
         <div class="container">
             <div class="post-head">
-                <h1 class="title">{{ page.title }}</h1>
-                <div class="post-details">
-                    <div class="date">
-                        <p>{{ page.date | date: '%B %d, %Y' }}</p>
-                    </div>
-                    {% if page.tags.size > 0 %}
-                    <div class="tags">
-                        <ul>
-                            {% for tag in page.tags %}
-                            <li class="tag"><a href="/tag/{{ tag }}">{{ tag }}</a></li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    {% endif %}
+                <div class="date">
+                    <p>
+                        {{ page.date | date: '%B %d, %Y' }}
+                        &middot;
+                        {% assign words = page.content | number_of_words %}
+                        {% if words < 180 %}
+                        1 min
+                        {% else %}
+                        {{ words | divided_by:180 }} mins
+                        {% endif %}
+                        read
+                    </p>
                 </div>
+                <h1 class="title">{{ page.title }}</h1>
+                {% if page.tags.size > 0 %}
+                <div class="tags">
+                    <ul>
+                        {% for tag in page.tags %}
+                        <li class="tag"><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
             </div>
 
             <article class="post-content">

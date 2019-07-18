@@ -18,23 +18,17 @@ header {
         display: table-cell;
     }
 
-    .title-container {
-        display: block;
-    }
-
-    .title, .subtitle {
-        color: $text-primary;
-    }
-
     .title {
-        font-size: 2.4em;
+        font-size: 2em;
         font-weight: 800;
         text-decoration: underline;
         text-decoration-color: $accent;
+        margin-bottom: 8px;
+        color: black;
     }
 
     .subtitle {
-        font-size: 1.1em;
+        font-size: 1em;
     }
 
     a.about:hover {
@@ -75,16 +69,5 @@ header {
         .container { 
             display: block;
         }
-        // .title {
-        //     font-size: 2em;
-        // }
-        
-        // .subtitle {
-        //     font-size: 1.2em;
-        // }
-        
-        // a.about {
-        //     font-size: 1.2em; }
-        // }
     }
 }

@@ -1,53 +1,57 @@
 @import "latest_posts";
 
+article {
+    h2, h3, p {
+        margin-bottom: 8px;
+    }
+}
+
 .post-head {
-    h1 {
-        font-size: 2.5em;
-        font-weight: 600;
+    margin-bottom: 10px; 
+
+    h1, p {
+        margin-bottom: 8px;
     }
 
-    h2 {
-        font-weight: 400;
+    h1 {
+        font-size: 2.2em;
     }
 
     p {
-        font-size: 1.2em;
+        font-size: 1em;
     }
 
-    .post-details {
-        .tag {
-            display: inline;
-            list-style-type: none;
-            background-color: #d3d3d3;
-            padding: 5px;
-            border-radius: 5px;
-        }
-
-        .tag a {
-            color: white;
-        }
-
-        .tag:hover {
-            a {
-                text-decoration: none;
-            }
-
-            background-color: #a9a9a9;
-        }
-
-        margin-bottom: 10px;
+    .tag {
+        display: inline;
+        list-style-type: none;
+        background-color: #d3d3d3;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 14px;
     }
+
+    .tag a {
+        color: white;
+    }
+
+    .tag:hover {
+        background-color: #a9a9a9;
+    }
+
 }
 
 article {
     h2 {
-        font-size: 1.3em;
+        margin-top: 16px;
     }
 
     blockquote {
-        color: $text-secondary;
         padding-left: 16px;
-        border-left: 3px solid $text-secondary;
+        border-left: 3px solid $bg-light;
+    }
+
+    blockquote > p {
+        color: $text-ternary;        
     }
 
     img {
@@ -55,6 +59,7 @@ article {
     }
 
     #ytplayer {
+        margin-top: 8px;
         margin-bottom: 16px;
         width: 100%;
     }
@@ -65,7 +70,7 @@ article {
         white-space: -pre-wrap;      /* Opera 4-6 */
         white-space: -o-pre-wrap;    /* Opera 7 */
         word-wrap: break-word;       /* Internet Explorer 5.5+ */
-        padding: 8px;
+        padding: 4px;
 
         margin-bottom: 8px;
         border-radius: 4px;
@@ -79,10 +84,13 @@ article {
 
 .tweet {
     background-color: $accent;
-    color: white;
     padding: 8px;
     border-radius: 4px;
     height: 24px;
+
+    i, p {
+        color: white;
+    }
 
     i {
         line-height: 24px;

@@ -1,0 +1,31 @@
+// Font family
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+// Headings
+h1, h2, h3, h4, h5, h6, p, a {
+    font-family: $font-family;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $text-primary;
+}
+
+h1 {
+	font-size: 2.5em;
+	font-weight: 600;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+p {
+    text-align: justify;
+    color: black;
+    line-height: 1.5;
+}
+
+p > code {
+	background-color: $bg-light;
+	font-size: inherit;
+}

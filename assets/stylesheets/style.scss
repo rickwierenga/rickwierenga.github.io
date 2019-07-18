@@ -1,13 +1,18 @@
 ---
 ---
 
-@import "{{ site.theme }}";
 @import "colors";
+@import "typography";
 @import "header";
 @import "post";
 @import "card";
 
 // Main
+* {
+    margin: 0;
+    padding: 0;
+}
+
 html { height: 100%; }
 
 body {
@@ -36,12 +41,22 @@ body {
     background-color: white;
     padding: 4px 8px;
     margin: 12px 4px 4px 4px;
-    color: $text-primary;
+    color: black;
     border-radius: 4px;
 }
 
 .hidden {
     display: none;
+}
+
+// Text
+a {
+    text-decoration: none;
+    color: $link-primary;
+}
+
+a.button:hover {
+    text-decoration: none;
 }
 
 // Items
@@ -50,7 +65,7 @@ hr {
     margin-bottom: 20px;
     height: 2px;
     border: none;
-    background-color: $light-gray;
+    background-color: $gray3;
 }
 
 .social-media {
@@ -108,11 +123,11 @@ footer {
     }
 
     a, p {
-        color: $text-secondary;
+        color: $gray3;
     }
 
     p.copyright {
-        color: $text-muted;
+        color: $gray4;
     }
 }
 
