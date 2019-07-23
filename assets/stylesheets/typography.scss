@@ -19,13 +19,38 @@ h2 {
     font-size: 1.3em;
 }
 
-p {
-    text-align: justify;
-    color: black;
-    line-height: 1.5;
+h2.section-title {
+    font-weight: 800;
+    font-size: 1.5em;
 }
+
+h1 {
+    color: $text-primary;
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 8px;
+}
+
+@mixin paragraph {
+    color: $text-secondary;
+    line-height: 23px;
+    font-weight: 400;
+    letter-spacing: 0.004em;
+    font-size: 17px;
+    margin: 8px auto;
+    font-family: $font-family;
+}
+
+p {
+    @include paragraph;
+}
+
 
 p > code {
 	background-color: $bg-light;
 	font-size: inherit;
+}
+
+p.large {
+    font-size: 1.3em;
 }

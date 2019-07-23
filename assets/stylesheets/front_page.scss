@@ -3,44 +3,6 @@
 
 @import "colors";
 
-header {
-    background-color: $accent;
-
-    .container {
-        display: block;
-        text-align: center;
-    }
-
-    img {
-        max-width: 30%;
-        max-width: 100px;
-        margin: auto;
-        display: block;
-    }
-
-    .title, .subtitle, .about {
-        color: white;
-        width: 100%;
-    }
-
-    .title, .subtitle {
-        color: white;
-    }
-
-    .title {
-        font-size: 2.5em;
-        text-decoration: none;
-    }
-
-    .subtitle {
-        font-size: 1em;
-    }
-
-    .contact.card {
-        background-color: rgba(255,255,255,0.9);
-    }
-}
-
 .about {
     margin-bottom: 3em;
 }

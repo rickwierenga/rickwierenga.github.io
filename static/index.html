@@ -10,47 +10,7 @@ permalink: /
     </head>
 
     <body>
-        <header>
-            <div class="container">
-                <a href="/">
-                    <h1 class="title center">Rick Wierenga</h1>
-                    <h2 class="subtitle center">A blog about whatever interests me.</h2>
-                </a>
-                <button onclick="toggleSocialMedia()" class="hide-desktop show-mobile show-more"><span class="btn-label">View </span>contact info <i class="fa fa-chevron-down toggle-icon" aria-hidden="true"></i></button>
-                <ul class="social-media">
-                    <li>
-                        <a href="https://twitter.com/rickwierenga" target="_blank">
-                            <i class="fa fa-2x fa-twitter twitter"></i>
-                            <p>Twitter</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/rickwierenga" target="_blank">
-                            <i class="fa fa-2x fa-github github"></i>
-                            <p>GitHub</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.youtube.com/channel/UCTBDbQ72E0WQRQ9gTqxiWmw" target="_blank">
-                            <i class="fa fa-2x fa-youtube-play youtube"></i>
-                            <p>YouTube</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/rick-w-0651b6183/" target="_blank">
-                            <i class="fa fa-2x fa-linkedin-square linkedin"></i>
-                            <p>LinkedIn</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/about">
-                            <i class="fa fa-2x fa-user"></i>
-                            <p>About</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </header>
+        {% include header.html %}
 
         <div class="categories container">
             {% for category in site.categories %}

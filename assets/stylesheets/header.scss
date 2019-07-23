@@ -1,7 +1,7 @@
-header {
+.navbar {
     padding: 20px 0;
     margin-bottom: 30px;
-    background-color: white;
+    background-color: $bg-dark;
 
     .container {
         display: flex;
@@ -12,6 +12,14 @@ header {
 
         justify-content: space-between;
         align-items: center;
+
+        padding: 20px;
+
+        max-width: 1000px;
+    }
+
+    .title, .subtitle, a {
+        color: white;
     }
 
     .title-link {
@@ -19,16 +27,14 @@ header {
     }
 
     .title {
-        font-size: 2em;
-        font-weight: 800;
-        text-decoration: underline;
-        text-decoration-color: $accent;
+        font-size: 1.5em;
+        font-weight: 600;
         margin-bottom: 8px;
-        color: black;
     }
 
     .subtitle {
         font-size: 1em;
+        font-weight: 400;
     }
 
     a.about:hover {
@@ -63,11 +69,20 @@ header {
 }
 
 @media (max-width: 667px) {
-    header {
-        margin-bottom: 1em;
-        
-        .container { 
+    .navbar {
+        margin-bottom: 0;
+
+        .container {
             display: block;
+        }
+
+        nav {
+            margin-top: 16px;
+        }
+
+        a.about {
+            font-size: 1em;
+            font-weight: 600;
         }
     }
 }
