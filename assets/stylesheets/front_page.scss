@@ -1,0 +1,43 @@
+---
+---
+
+@import "colors";
+
+.about {
+    margin-bottom: 3em;
+}
+
+.social-media {
+    a, i {
+        color: white;
+    }
+
+    li {
+        padding: 1em;
+    }
+}
+
+.categories {
+    hr {
+        margin-bottom: 1.5em;
+    }
+
+    .post-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 2em;
+        margin-bottom: 3em;
+    }
+
+    .category-title {
+        text-transform: capitalize;
+    }
+}
+
+@media (max-width: 667px) {
+    .categories {
+        .post-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+}

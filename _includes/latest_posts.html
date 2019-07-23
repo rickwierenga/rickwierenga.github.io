@@ -6,6 +6,7 @@
         {% for post in site.posts limit:2 %}
         <a href="{{ post.url }}" class="post card">
             <span style="display: block">
+                <p class="category">{{ post.category }}</p>
                 <h3>{{ post.title }}</h3>
                 <p class="info">{{ post.date | date_to_string }}</p>
                 <p class="read">Read <i class="fa fa-chevron-right"></i></p>

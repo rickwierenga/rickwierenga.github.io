@@ -2,33 +2,44 @@
     <html lang="en">
     <head>
     {% include head.html %}
-    <link href="/assets/css/dracula.css" rel="stylesheet">
+    <link href="/assets/stylesheets/dracula.css" rel="stylesheet">
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
 
     {% include header.html %}
 
     <body>
         <div class="container">
-            <div class="post-head">
-                <h1 class="title">{{ page.title }}</h1>
-                <div class="post-details">
-                    <div class="date">
-                        <p>{{ page.date | date: '%B %d, %Y' }}</p>
-                    </div>
+            <article class="post-content">
+                <header>
+                    <p class="date">
+                        {{ page.date | date: '%B %d, %Y' }}
+                    </p>
+                    <h1 class="post-title">{{ page.title }}</h1>
                     {% if page.tags.size > 0 %}
                     <div class="tags">
-                        <ul>
-                            {% for tag in page.tags %}
-                            <li class="tag"><a href="/tag/{{ tag }}">{{ tag }}</a></li>
-                            {% endfor %}
-                        </ul>
+                        {% for tag in page.tags %}
+                            <a href="/tag/{{ tag }}" class="tag">{{ tag }}</a>
+                        {% endfor %}
                     </div>
                     {% endif %}
-                </div>
-            </div>
-
-            <article class="post-content">
-            {{content}}
+                </header>
+                <!-- <div class="date">
+                    <p>
+                        {{ page.date | date: '%B %d, %Y' }}
+                        &middot;
+                        {% assign words = page.content | number_of_words %}
+                        {% if words < 180 %}
+                        1 min
+                        {% else %}
+                        {{ words | divided_by:180 }} mins
+                        {% endif %}
+                        read
+                    </p>
+                </div> -->
+                
+            
+                {{content}}
             </article>
 
             <div class="share-twitter">
@@ -39,7 +50,7 @@
 
             {% include latest_posts.html %}
         </div>
-
+        
         {% include footer.html %}
     </body>
 </html>
