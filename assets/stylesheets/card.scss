@@ -45,18 +45,21 @@ $shadow-color: rgba(184, 184, 184, 0.5);
     transition: ease 0.5s;
     transform: translate(0, 0);
 
-    h3 {
-        margin-bottom: 4px;
-        font-weight: 600;
-        color: $text-primary;
-    }
-
     .info {
         color: $text-muted;
+        margin-bottom: 8px;
+    }
+
+    h3 {
+        margin: 4px 0 8px 0;
+        font-weight: 600;
+        color: $text-primary;
+        font-size: 1.4em;
     }
 
     .excerpt {
         color: $text-secondary;
+        line-height: 1.3;
     }
 
     .read {

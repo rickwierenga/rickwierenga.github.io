@@ -7,6 +7,12 @@
         grid-column-gap: 2em;
         grid-row-gap: 25px;
     }
+
+    .category {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1em;
+    }
 }
 
 @media (max-width: 667px) {
