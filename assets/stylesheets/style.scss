@@ -70,6 +70,10 @@ hr {
     margin-top: 8px;
 }
 
+ol, ul {
+    margin:0 0 0 25px;
+}
+
 // Footer
 body::after {
     content: '';
