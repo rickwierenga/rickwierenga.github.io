@@ -3,7 +3,7 @@
     <head>
     {% include head.html %}
     <link href="/assets/stylesheets/dracula.css" rel="stylesheet">
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
 
     {% include header.html %}
@@ -14,6 +14,14 @@
                 <header>
                     <p class="date">
                         {{ page.date | date: '%B %d, %Y' }}
+                        &middot;
+                        {% assign words = page.content | number_of_words %}
+                        {% if words < 180 %}
+                        1 min
+                        {% else %}
+                        {{ words | divided_by:180 }} mins
+                        {% endif %}
+                        read
                     </p>
                     <h1 class="post-title">{{ page.title }}</h1>
                     {% if page.tags.size > 0 %}
@@ -24,21 +32,6 @@
                     </div>
                     {% endif %}
                 </header>
-                <!-- <div class="date">
-                    <p>
-                        {{ page.date | date: '%B %d, %Y' }}
-                        &middot;
-                        {% assign words = page.content | number_of_words %}
-                        {% if words < 180 %}
-                        1 min
-                        {% else %}
-                        {{ words | divided_by:180 }} mins
-                        {% endif %}
-                        read
-                    </p>
-                </div> -->
-                
-            
                 {{content}}
             </article>
 
