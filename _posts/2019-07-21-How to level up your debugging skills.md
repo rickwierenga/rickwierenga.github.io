@@ -20,6 +20,8 @@ Instead of clicking ![](/assets/images/continue.png){:class="inline"} to continu
 
 Breakpoints allow you to take a look at the current state of your application. Where print statements only print out some information, often in an unorganised fashion, breakpoints allow you to take a look at every variable in memory. In the bottom right of the debugger, click ![](/assets/images/variableview.png){:class="inline"} to open the ‘Variables View’. Only after you try this will you realise how incredible this feature is.
 
+![Debugger](/assets/images/debugger.png)
+
 ## Exception breakpoints
 
 Adding breakpoints manually is already much better than print statements, but it gets a lot better with xxception breakpoints. Those stop the execution right before an error occurs. When the application crashes, Xcode will very often print out some unreadable error message and bring you to `class AppDelegate: UIResponder, UIApplicationDelegate {` which is very annoying, to say the least. Exception breakpoints change that. They provide all the same benefits as normal breakpoint right at the most crucial point.
