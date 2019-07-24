@@ -8,7 +8,7 @@ tags:
 - pillow
 ---
 
-Compressing images is a neat way to shrink the size of an image while maintaining the resolution. In this tutorial I’m building an image compressor using Python, [Numpy](http://numpy.org) and [Pillow](https://github.com/python-pillow/Pillow/). We’ll be using machine learning, the unsupervised K-means algorithm to be precise.
+Compressing images is a neat way to shrink the size of an image while maintaining the resolution. In this tutorial we're building an image compressor using Python, [Numpy](http://numpy.org) and [Pillow](https://github.com/python-pillow/Pillow/). We’ll be using machine learning, the unsupervised K-means algorithm to be precise.
 
 If you don’t have Numpy and Pillow installed, you can do so using the following command:
 ```bash
@@ -26,7 +26,7 @@ import numpy as np
 ```
 
 ## The K-means algorithm
-K-means, as mentioned in the introduction, is an unsupervised machine learning algorithm. Simplified, the major difference between unsupervised and supervised machine learning algorithms is that supervised learning algorithms learn by example (there are labels), and unsupervised learning algorithms learn by trial and error.
+K-means, as mentioned in the introduction, is an unsupervised machine learning algorithm. Simplified, the major difference between unsupervised and supervised machine learning algorithms is that supervised learning algorithms learn by example (labels are in the dataset), and unsupervised learning algorithms learn by trial and error; you label the data yourself.
 
 I’ll be explaining how the algorithm works based on an example. In the illustration below there are two features, $$x_1$$ and $$x_2$$.
 
@@ -36,7 +36,7 @@ We want to assign each item to one out of two clusters. The most natural way to 
 
 ![Colored points on a 2 plane](/assets/images/grouped.png)
 
-K-means is an algorithm to do exactly this. Note that $$K$$ is the number of clusters we want to have, hence **K** means.
+K-means is an algorithm to do exactly this. Note that $$K$$ is the number of clusters we want to have, hence the name K means.
 
 We start by randomly getting $$K$$ training examples and in $$\mu$$ so that the points are $$\mu_1, \mu_2, …, \mu_k$$ and $$\mu \in \mathbb{R}^n$$ where $$n$$ is the number of features. At initialization, the points might be very close to one another, so we have to check if our result looks like how we want it to look because it might stuck be in a local optimum.
 
@@ -45,22 +45,24 @@ Then for a certain number of iterations, execute the following steps:
 1. For every training example, assign $$c^{(i)}$$ to the closest centroid.
 2. For every centroid $$\mu_k$$, set the location to be the average of examples assigned to it.
 
-As the algorithm progresses, generally the centroids will move to the center of the clusters and the overall distance of the examples to the clusters get smaller.
+As the algorithm progresses, generally the centroids will move to the center of the clusters and the overall distance of the examples to the clusters gets smaller.
 
 ## K-means for image compression
-This technique can also be used for image compression. Each pixel of the image consists of three values, R(ed), B(lue) and G(reen). Those can be seen as the points on the grid, 3D in case of RGB. The objective of image compression in this case is to find colors that minimize the color differences between the original image and the compressed image. Reducing the number of colors, by taking the average of similar colors, also reduces the size of the image which is what we want.
+This technique can also be used for image compression. Each pixel of the image consists of three values, R(ed), B(lue) and G(reen). Those can be seen as the points on the grid, in 3D in case of RGB. The objective of image compression in this case is to reduce the number of colors by taking the average $$K$$ colors that look closest to the original image. An image with fever colors takes up less disk space, which is what we want.
+
+Compressing the image can also be a preprocessing step to another algorithm. Reducing the size of the input data generally speeds up learning.
 
 ## Implementing K-means
-We start by implementing a function that creates initial points for the centroids. This function takes as input `X`, the training examples, and chooses $K$ distinct points at random.
+We start by implementing a function that creates initial points for the centroids. This function takes as input `X`, the training examples, and chooses $$K$$ distinct points at random.
 
 ```python
 def initialize_K_centroids(X, K):
     """ Choose K points from X at random """
-    m = X.shape[0]
+    m = len(X)
     return X[np.random.choice(m, K, replace=False), :]
 ```
 
-Then we write a function to find the closest centroid for each training example. This is the first step of the algorith. We take `X` and the `centroids` as input and return the the index of the closest centroid for every example in `c`, an m-dimensional vector.
+Then we write a function to find the closest centroid for each training example. This is the first step of the algorithm. We take `X` and the `centroids` as input and return the the index of the closest centroid for every example in `c`, an m-dimensional vector.
 ```python
 def find_closest_centroids(X, centroids):
     m = len(X)
@@ -87,7 +89,7 @@ def compute_means(X, idx, K):
     return centroids
 ```
 
-Finally, we got all the ingredients to complete the K-means algorithm. We set `max_iter`, the number of iterations, to 10. Note that if the centroids aren't moving anymore, we return the results because we cannot optimize any further.
+Finally, we got all the ingredients to complete the K-means algorithm. We set `max_iter`, the maximum number of iterations, to 10. Note that if the centroids aren't moving anymore, we return the results because we cannot optimize any further.
 ```python
 def find_k_means(X, K, max_iters=10):
     centroids = initialize_K_centroids(X, K)
@@ -126,7 +128,7 @@ print('Image found with width: {}, height: {}, depth: {}'.format(w, h, d))
 Then we get our feature matrix $$X$$. We're reshaping the image because each pixel has the same meaning (color), so they don't have to be presented as a grid.
 ```python
 X = image.reshape((w * h, d))
-K = 40 # the number of colors in the image
+K = 20 # the desired number of colors in the compressed image
 ```
 
 Finally we can make use of our algorithm and get the $$K$$ colors. These colors are chosen by the algorithm.
@@ -135,7 +137,7 @@ Finally we can make use of our algorithm and get the $$K$$ colors. These colors 
 colors, _ = find_k_means(X, K, max_iters=20)
 ```
 
-Because the indexes returned by the `find_k_means` function are 1 iteration behind the colors, we compute the indexes for the current colors. Each pixel has a value in ${0...K}$ corresponding, of course, to its color.
+Because the indexes returned by the `find_k_means` function are 1 iteration behind the colors, we compute the indexes for the current colors. Each pixel has a value in $${0...K}$$ corresponding, of course, to its color.
 ```python
 idx = find_closest_centroids(X, colors)
 ```
@@ -161,3 +163,8 @@ This is the fun part, testing our program. You can choose any (png) image you wa
 The file size was reduced by 71%, from 228kb to 65kb with $$K = 20$$.
 
 To get a better intuition for this algorith, you should try out different values for $$K$$ and `max_iter` yourself.
+
+## Conclusion
+As you've seen in this tutorial, it's quite easy to reduce the file size of an image using unsupervised machine learning.
+
+Check out the finished program on [GitHub](https://github.com/rickwierenga/PythonImageCompressor/).
