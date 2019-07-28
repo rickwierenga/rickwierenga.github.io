@@ -17,7 +17,7 @@ One of the best pieces of software available in this field, *natural language pr
 The `NaturalLanguage` framework is a relatively new framework, introduced at WWDC 2018. 
 
 The following is a schematic of what the natural language framework looks like. The green boxes are the steps the framework takes when it’s analyzing text.
-![](Introduction%20to%20natural%20language%20processing%20in%20Swift/Screenshot%202019-07-28%20at%2011.16.02%20AM.png)
+![Schematic of the natural language framework](/assets/images/naturallanguage.png)
 
 Intelligence includes things like identifying people, objects and places, classifying nouns, verbs, etc. and identifying languages. These categories are called tag schemes in `NaturalLanguage`.
 
@@ -99,7 +99,7 @@ Finally, have the function return `nil` in case the user inputs an objective sen
 
 ## Testing the program
 The following test cases make it evident that natural language is relatively accurate.
-![](Introduction%20to%20natural%20language%20processing%20in%20Swift/Screenshot%202019-07-28%20at%2012.18.34%20PM.png)
+![Schematic of the natural language framework](/assets/images/results.png)
 
 You should definitely try out some of your own sentences.
 
