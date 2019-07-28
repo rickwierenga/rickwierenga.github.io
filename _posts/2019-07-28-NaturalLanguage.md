@@ -115,6 +115,8 @@ Once computers are even better at recognizing emotions, they might be able to se
 
 Finally, extending the bandwidth of human-machine communication will benefit everyone. Interpreting emotions is just the start!
 
+[Check out the finished playground on GitHub](https://github.com/rickwierenga/NaturalLanuage/)
+
 ## Where to go from here
 If you want to learn more about natural language processing and the natural language framework check out the following websites:
 * [Natural Language Apple Developer Documentation](https://developer.apple.com/documentation/naturallanguage)
