@@ -3,7 +3,7 @@ layout: post
 title: Introduction to natural language processing in Swift
 category: apple
 tags:
-- natural language processing
+- nlp
 - philosophy
 ---
 
