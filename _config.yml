@@ -4,6 +4,9 @@ collections:
 
 permalink: /blog/:categories/:title.html
 
+plugins:
+  - jekyll-feed
+
 sass:
   sass_dir: /assets/stylesheets/
 
