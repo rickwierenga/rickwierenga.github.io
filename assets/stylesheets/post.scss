@@ -16,8 +16,8 @@
 }
 
 article {
-    .MathJax, .math, .mrow {
-        overflow: scroll;
+    .MathJax_Display {
+        overflow-x: scroll;
     }
 
     header {
