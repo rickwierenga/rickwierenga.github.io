@@ -16,6 +16,10 @@
 }
 
 article {
+    .MathJax, .math, .mrow {
+        overflow: scroll;
+    }
+
     header {
         margin-bottom: 2em;
 
