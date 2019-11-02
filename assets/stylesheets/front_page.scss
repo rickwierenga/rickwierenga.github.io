@@ -1,7 +1,53 @@
 ---
 ---
 
+$shadow-color: rgba(184, 184, 184, 0.5);
+
+
 @import "colors";
+
+body {
+    background-color: #f3f3f5;
+}
+
+// ------------------
+// everything below is here for testing. move to another file.
+
+header {
+    background-color: white !important;
+
+    h1, h2 {
+        text-align: center;
+    }
+
+    nav {
+        display: table;
+        margin: 0 auto;
+    }
+
+    ul {
+        margin-top: 1em;
+        list-style: none;
+    }
+
+    li {
+        box-sizing: border-box;
+        float: left;
+        margin-left: 4px;
+        margin-right: 4px;
+        line-height: 2em;
+    }
+
+    li > a {
+        color: black !important;
+    }
+}
+
+header > div {
+    padding: 2em;
+}
+
+// ------------------
 
 .about {
     margin-bottom: 3em;
@@ -17,16 +63,62 @@
     }
 }
 
-.categories {
+.categories-container {
+    .categories {
+        display: flex;
+
+        .category {
+            margin: 0 20px 10px 0;
+        }
+
+        .category > .selected {
+            font-weight: 700;
+        }
+
+        h3 {
+            text-transform: capitalize;
+            font-weight: 800;
+            color: $text-secondary;
+        }
+    }
+
+    hr {
+        border: 0;
+        border-top: solid 3px $bg-medium;
+    }
+}
+
+#feed {
     hr {
         margin-bottom: 1.5em;
     }
 
     .post-grid {
+        margin-top: 1em;
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         grid-row-gap: 2em;
+        grid-column-gap: 2em;
         margin-bottom: 3em;
+
+        .card {
+            display: block;
+            padding: 20px;
+            // box-shadow: 0 5px 27px $shadow-color;
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: ease 0.5s;
+            transform: translate(0, 0);
+        }
+
+        .card:first-child {
+            grid-column: 1 / -1;
+        }
+
+        .card:hover {
+            transform: translate3D(0,-1px,0) scale(1.02);
+        }
     }
 
     .category-title {
@@ -34,8 +126,16 @@
     }
 }
 
+footer {
+    margin-top: -100px;
+}
+
 @media (max-width: 667px) {
-    .categories {
+    footer {
+        margin-top: -10px;
+    }
+
+    #feed {
         .post-grid {
             grid-template-columns: 1fr;
         }

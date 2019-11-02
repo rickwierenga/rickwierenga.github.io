@@ -1,49 +1,53 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-    {% include head.html %}
-    <link href="/assets/stylesheets/dracula.css" rel="stylesheet">
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    </head>
+  <html lang="en">
+  <head>
+  {% include head.html %}
+  <link href="/assets/stylesheets/emacs.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/stylesheets/post.css">
+  <link rel="stylesheet" href="/assets/stylesheets/latest.css">
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </head>
 
-    {% include header.html %}
+  {% include header.html %}
 
-    <body>
-        <div class="container">
-            <article class="post-content">
-                <header>
-                    <p class="date">
-                        {{ page.date | date: '%B %d, %Y' }}
-                        &middot;
-                        {% assign words = page.content | number_of_words %}
-                        {% if words < 180 %}
-                        1 min
-                        {% else %}
-                        {{ words | divided_by:180 }} mins
-                        {% endif %}
-                        read
-                    </p>
-                    <h1 class="post-title">{{ page.title }}</h1>
-                    {% if page.tags.size > 0 %}
-                    <div class="tags">
-                        {% for tag in page.tags %}
-                            <a href="/tag/{{ tag }}" class="tag">{{ tag }}</a>
-                        {% endfor %}
-                    </div>
-                    {% endif %}
-                </header>
-                {{content}}
-            </article>
-
-            <div class="share-twitter">
-                <a href="http://twitter.com/home?status={{ page.title }}%20via%20@rickwierenga%20{{ site.url }}{{ page.url }}" target="_blank" class="tweet">
-                    <i class="fa fa-2x fa-twitter twitter"></i><p>Tweet about this post!</p>
-                </a>
+  <body>
+    <div id="content">
+      <div class="container">
+        <article class="post-content">
+          <header>
+            <p class="date">
+              {{ page.date | date: '%B %d, %Y' }}
+              &middot;
+              {% assign words = page.content | number_of_words %}
+              {% if words < 180 %}
+              1 min
+              {% else %}
+              {{ words | divided_by:180 }} mins
+              {% endif %}
+              read
+            </p>
+            <h1 class="post-title">{{ page.title }}</h1>
+            {% if page.tags.size > 0 %}
+            <div class="tags">
+              {% for tag in page.tags %}
+                  <a href="/tag/{{ tag }}" class="tag">{{ tag }}</a>
+              {% endfor %}
             </div>
+            {% endif %}
+          </header>
+          {{content}}
+        </article>
 
-            {% include latest_posts.html %}
+        <div class="share-twitter">
+            <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}%20via%20@rickwierenga" target="_blank" class="tweet">
+                <i class="fa fa-2x fa-twitter twitter"></i><p>Tweet about this post!</p>
+            </a>
         </div>
-        
-        {% include footer.html %}
-    </body>
+      </div>
+
+      {% include latest_posts.html %}
+    </div>
+    
+    {% include footer.html %}
+  </body>
 </html>

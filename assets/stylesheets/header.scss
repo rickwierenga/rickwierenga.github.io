@@ -2,6 +2,14 @@
     padding: 20px 0;
     margin-bottom: 30px;
     background-color: $bg-dark;
+    position: relative;
+
+    hr {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border-bottom: solid 1px $bg-light;
+    }
 
     .container {
         display: flex;
@@ -14,8 +22,6 @@
         align-items: center;
 
         padding: 20px;
-
-        max-width: 1000px;
     }
 
     .title, .subtitle, a {

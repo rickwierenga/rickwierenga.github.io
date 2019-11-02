@@ -4,7 +4,6 @@
 @import "colors";
 @import "typography";
 @import "header";
-@import "post";
 @import "card";
 
 // Main
@@ -22,8 +21,18 @@ body {
     position: relative;
 }
 
+#content {
+    min-height: 100%;
+}
+
+header {
+    .title, .subtitle, .about {
+        font-family: $font-title !important;
+    }
+}
+
 .container {
-    max-width: 750px;
+    max-width: 800px;
     padding: 3em;
     margin-right: auto;
     margin-left: auto;
@@ -60,16 +69,6 @@ a.button:hover {
     text-decoration: none;
 }
 
-// Items
-hr {
-    margin-top: 0;
-    margin-bottom: 20px;
-    height: 2px;
-    border: none;
-    background-color: $bg-light;
-    margin-top: 8px;
-}
-
 ol, ul {
     margin:0 0 0 25px;
 }
@@ -82,11 +81,9 @@ body::after {
 }
 
 footer {
-    margin-top: 10em;
-    margin-bottom: 1em;
-    position: absolute;
+    height: 50px;
+    margin-top: -10px;
     width: 100%;
-    bottom: 0;
 
     p {
         text-align: center;

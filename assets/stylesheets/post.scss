@@ -1,4 +1,7 @@
-@import "latest_posts";
+---
+---
+@import "colors";
+@import "typography";
 
 .tag {
     background-color: $bg-light;
@@ -49,7 +52,7 @@ article {
     }
 
     blockquote > p {
-        color: $text-ternary;        
+        color: #585858;      
     }
 
     .embed-container, #ytplayer {
@@ -79,6 +82,15 @@ article {
 
         margin-bottom: 8px;
         border-radius: 4px;
+    }
+
+    .text-muted {
+        color: gray;
+
+        a {
+            color: gray;
+            text-decoration: underline;
+        }
     }
 }
 

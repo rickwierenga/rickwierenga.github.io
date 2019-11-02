@@ -1,0 +1,44 @@
+---
+---
+@import "colors";
+@import "typography";
+
+#latest-posts-container {
+    background-color: #f3f3f5;
+    padding: 20px 0;
+}
+
+#latest-posts {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2em;
+        grid-row-gap: 25px;
+    }
+
+    hr {
+        margin-bottom: 16px;
+        color: e3e3e5;
+    }
+
+    .card {
+        background-color: white;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .category {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1em;
+        color: $text-ternary;
+    }
+}
+
+@media (max-width: 667px) {
+    #latest-posts {
+        .grid {
+            grid-template-columns: 1fr;
+        }
+    }
+}

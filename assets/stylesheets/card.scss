@@ -40,7 +40,7 @@ $shadow-color: rgba(184, 184, 184, 0.5);
     display: block;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 5px 27px $shadow-color;
+    // box-shadow: 0 5px 27px $shadow-color;
     overflow: hidden;
     transition: ease 0.5s;
     transform: translate(0, 0);
@@ -64,13 +64,12 @@ $shadow-color: rgba(184, 184, 184, 0.5);
     }
 
     .read {
-        float: right;
-        color: $accent;
-        display: table-cell;
         margin: 0;
-        position: absolute;
-        bottom: 16px;
-        right: 16px;
+        width: 100%;
+        text-align: right;
+        color: $accent;
+        padding-left: 8px;
+        padding-top: 8px;
     }
 }
 
