@@ -4,6 +4,7 @@ title: An introduction to machine learning through polynomial regression
 category: machine learning
 tags:
   - machinelearning
+
 ---
 
 Machine learning is one of the hottest topics in computer science today. And not without a reason: it has helped us do things that couldn't be done before like image classification, image generation and natural language processing. But all of it boils down to a really simple concept: you give the computer data and the computer then finds patterns in that data. This is called "learning" or "training", depending on your point of view. These learnt patterns can be extrapolated to make predictions. How? That's what we are looking at today.
@@ -63,7 +64,7 @@ $$X = \begin{bmatrix} 1 && 1 \\ 1 && 2 \\ 1 && 3 \\ 1 && 4 \\ 1 && 5 \\ 1 && 6 \
 
 so that
 
-$$h_\theta(x) = \theta^Tx$$
+$$h_\theta(x) = \theta^Tx.$$
 
 Because these $$1$$s change the hypothesis independently from the input $$x$$ it's sometimes called the bias factor. The bias vector is also the reason $$\theta \in \mathbb{R}^{n+1}$$ and not $$\theta \in \mathbb{R}^n$$
 
@@ -163,13 +164,13 @@ In my case I had a loss of $$142\ 911\ 368\ 743$$, which may vary slightly as a 
 
 We can improve our model, decrease our loss, by chaning the paramters of $$\theta$$. We do that using an algorithm called gradient descent.
 
-Gradient descent caculates the _gradient_ of a model using the partial derrivative of the cost function. This gradient is multiplied by a learning rate, often denoted as $$\alpha$$, to control the pace of learning\*. The result of this multiplication is then substracted from the weights to decrease the loss of further predictions.
+Gradient descent caculates the _gradient_ of a model using the partial derivative of the cost function. This gradient is multiplied by a learning rate, often denoted as $$\alpha$$, to control the pace of learning\*. The result of this multiplication is then substracted from the weights to decrease the loss of further predictions.
 
 Below is a plot of the loss function. The gradient decreases as $$J$$ approaches the minimum. [source](https://www.quora.com/Whats-the-difference-between-gradient-descent-and-stochastic-gradient-descent)
 
 ![plot of J](/assets/images/gd.png)
 
-More formally, the partial derrivative of $$J$$ with respect to paramters  $$\theta$$ is
+More formally, the partial derivative of $$J$$ with respect to paramters  $$\theta$$ is
 
 $$\frac{\partial J(\theta)}{\partial \theta_j} = \frac{1}{m}x_j^T(X\theta -y)$$
 
@@ -179,9 +180,9 @@ $$\nabla J(\theta) = \frac{1}{m}x^T(X\theta -y)$$
 
 The gradient descent step is
 
-$$\theta := \theta - \alpha \nabla J(\theta) = \theta - \alpha \frac{1}{m}X^T(X\theta -y)$$
+$$\theta := \theta - \alpha \nabla J(\theta) = \theta - \alpha \frac{1}{m}X^T(X\theta -y).$$
 
-. We repeat this computation very many times. This is called training.
+We repeat this computation very many times. This is called training.
 
 \*Choosing a value of $$\alpha$$ is an interesting topic on itself so I'm not going to discuss it in this article. If you're interested you can learn more [here](https://heartbeat.fritz.ai/an-empirical-comparison-of-optimizers-for-machine-learning-models-b86f29957050).
 
@@ -310,4 +311,3 @@ Here are two great courses if you want to learn more about machine learning:
 * TensorFlow's machine learning curriculum which I lay out in [this thread](https://twitter.com/rickwierenga/status/1196879291063164928).
 
 You can view the complete code for this project [here](https://colab.research.google.com/drive/18MpkRiZCEDg0BZgpqrS_3_mQs_0VpQJ4).
-
