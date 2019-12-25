@@ -92,7 +92,7 @@ You should try adding or removing polynomial features yourself.
 
 ### Normalization
 
-When we added the features a new problem emerged: their ranges are very different from $$X_1$$ meaning that a small change in $$\theta_2, \theta_3, \theta_4$$ have much bigger imopacts than changing $$\theta_1$$. This causes problems when we are fitting the values $$\theta$$ later on.
+When we added the features a new problem emerged: their ranges are very different from $$X_1$$. Every feature $$X_j$$ has an associated weight $$\theta_j$$ (more in that later). This means that a small change in a weight associated with a generally large feature has a much bigger impact than the same change has on a generally small feature. This causes problems when we are fitting the values $$\theta$$ later on.
 
 To fix this problem we use a technique called _normalization_, defined as
 
@@ -110,13 +110,15 @@ Before we make a prediction I would like to make a small change to the hypothesi
 
 $$h_\theta(x) = \displaystyle\sum_i^n \theta_i x_i = \theta_0 x_0 + \theta_1 x_1 + \ldots + \theta_n x_n$$
 
+Here you can see the link between $$X_j$$ and $$\theta_j$$.
+
 Because we will be using the hypothesis function many times in the future it should be very fast. Right now $$h$$ can only compute one the prediction for one training example at a time.
 
-We can change that by _vectorizing_ it:
+We can change that by _vectorizing_ it. If we implemented the sum function by looping each $$x$$ with associated $$\theta$$, it would take a very long time. We can change that by vectorizing the function. With vectorization you can compute the outputs for an entire matrix, or vector, at once. While you technically compute the same values, good linear algebra libraries such as numpy will optimize the use of the available hardware to speed up the process. A vectorized implementation of $$h$$:
 
 $$h_\theta(X) = X\theta$$
 
-This function takes the whole matrix $$X$$ as an input and produces the prediction $$\hat{y}$$ in one computation.
+You can validate it works by writing down a few examples. This function takes the whole matrix $$X$$ as an input and produces the prediction $$\hat{y}$$ in one computation.
 
 In Python $$h_\theta(X)$$ can be implemented as:
 
