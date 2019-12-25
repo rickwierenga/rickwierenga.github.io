@@ -229,6 +229,32 @@ We still have loss of $$2\ 596\ 116\ 902$$. While this may seem like a huge numb
 
 Now that we have fitted $$\theta$$, we can make predictions by passing new values of $$x$$ to $$h_\theta(x)$$.
 
+## The normal equation
+
+Even though it is a very popular choice, gradient descent is not the only way to find values for $$\theta$$. Another method called the _normal equation_ also exists. With this formula you can compute the optimal values for $$\theta$$ without choosing $$\alpha$$ and without iterating.
+
+The normal equation is defined as
+
+$$\theta = (X^TX)^{-1}X^Ty$$
+
+For more information on where this comes from check out [this](https://eli.thegreenplace.net/2014/derivation-of-the-normal-equation-for-linear-regression) post.
+
+The biggest advantage of this is you always find the optimal value of $$\theta$$. Note that this is the best fit for the model ($$h$$) you built, and might not the best solution for your problem in general.
+
+A drawback of using this method over gradient descent is the computational cost.  Computing the inverse $$(X^TX)^{-1}$$ is $$O(n^3)$$ so when you have many features, it might be very expensive. In cases where $$n$$ is large, think $$n > 10\ 000$$, you would probably want to switch to gradient descent or another training algorithm.
+
+Implementing the normal equation in Python is just a matter of implementing the formula:
+
+```python
+theta = np.linalg.pinv(X.T @ X) @ X.T @ y
+```
+
+Note that we use the pseudo inverse instead of the real inverse because a training set might be noninvertable.
+
+![normal fit](/assets/images/pyr/7.png)
+
+Another risk over using the normal equation is overfitting, which I will cover in the next section.
+
 ## Overfitting, underfitting, and some tips
 
 Before I wrap up this tutorial I would like to share a little more theory behind machine learning.
@@ -253,9 +279,9 @@ Remember that machine learning models are not magic applications. As a rule of t
 
 Underfitting but particularly overfitting are perhaps the biggest problems in machine learning today. To really understand it we have to go back to the fundamental concept of machine learning: learning from data to make predictions about or in the future, using a model.
 
-When your model is fit to specifically to your dataset it's overfitted. While it has a very low loss, in extreme cases even $$0$$, it does not generalize well in the real world. If we overfitted the model we used in this program it could look like this:
+When your model is fit too specifically to your dataset it's overfitted. While it has a very low loss, in extreme cases even $$0$$, it does not generalize well in the real world. The normal equation we used earlier actually overfitted the dataset, because it found a function which passes through our training values very closely, but it does not represent a function of position to salary. For example, notice how it predicts a higher salary for lowest position.
 
-![overfitted](/assets/images/pyr/5.png)
+![overfitted](/assets/images/pyr/7.png)
 
 Overfitting can occur when you train your model for too long. Another cause for overfitting is having too many features. To reduce overfitting you should try training your model for fewer epochs, or removing some features. You always want $$m > n$$.
 
