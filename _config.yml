@@ -6,6 +6,7 @@ permalink: /blog/:categories/:title.html
 
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 sass:
   sass_dir: /assets/stylesheets/
@@ -13,3 +14,18 @@ sass:
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
+
+twitter:
+  username: rickwierenga
+  card: summary
+
+title: Rick Wierenga
+url: rickwierenga.com
+tagline: A blog about whatever interests me.
+
+social:
+  name: Rick Wierenga
+  links:
+    https://twitter.com/rickwierenga
+    https://github.com/rickwierenga
+    https://www.linkedin.com/in/rickwierenga
