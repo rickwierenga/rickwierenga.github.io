@@ -3,6 +3,8 @@ layout: heartbeat
 title: An Empirical Comparison of Optimizers for Machine Learning Models 
 category: Machine Learning
 link: https://heartbeat.fritz.ai/an-empirical-comparison-of-optimizers-for-machine-learning-models-b86f29957050
+tags:
+  - machinelearning
 ---
 
 At every point in time during training, a neural network has a certain loss, or error, calculated using a cost function (also referred to as a loss function). This function indicates how ‘wrong’ the network (parameters) is based on the training or validation data. Optimally, the loss would be as low as possible. Unfortunately, cost functions are nonconvex — they don’t just have one minimum, but many, many local minima.

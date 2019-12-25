@@ -5,6 +5,7 @@ category: Machine Learning
 tags:
 - python
 - numpy
+- machinelearning
 - pillow
 ---
 

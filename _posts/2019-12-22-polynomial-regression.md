@@ -2,6 +2,8 @@
 layout: post
 title: An introduction to machine learning through polynomial regression 
 category: machine learning
+tags:
+  - machinelearning
 ---
 
 Machine learning is one of the hottest topics in computer science today. And not without a reason: it has helped us do things that couldn't be done before like image classification, image generation and natural language processing. But all of it boils down to a really simple concept: you give the computer data and the computer then finds patterns in that data. This is called "learning" or "training", depending on your point of view. These learnt patterns can be extrapolated to make predictions. How? That's what we are looking at today.

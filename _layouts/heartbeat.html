@@ -17,6 +17,13 @@
               {{ page.date | date: '%B %d, %Y' }}
             </p>
             <h1 class="post-title">{{ page.title }}</h1>
+            {% if page.tags.size > 0 %}
+            <div class="tags">
+              {% for tag in page.tags %}
+                  <a href="/tag/{{ tag }}" class="tag">{{ tag }}</a>
+              {% endfor %}
+            </div>
+            {% endif %}
           </header>
           {{ content }}
           <div class="link">

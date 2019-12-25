@@ -3,17 +3,6 @@
 @import "colors";
 @import "typography";
 
-.tag {
-    background-color: $bg-light;
-    padding: 6px 12px;
-    display: inline-block;
-    color: $text-primary;
-}
-
-.tag:hover {
-    background-color: $bg-medium; 
-}
-
 .post-head {
     margin-bottom: 3em;
 }
