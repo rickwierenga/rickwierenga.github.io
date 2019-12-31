@@ -4,7 +4,7 @@
   {% include head.html %}
   <link href="/assets/stylesheets/emacs.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/stylesheets/post.css">
-  <link rel="stylesheet" href="/assets/stylesheets/latest.css">
+
   <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   </head>
 
@@ -12,45 +12,27 @@
 
   <body>
     <div id="content">
-      <div class="container">
-        <article class="post-content">
-          <header>
-            <p class="date">
-              {{ page.date | date: '%B %d, %Y' }}
-              &middot;
-              {% assign words = page.content | number_of_words %}
-              {% if words < 180 %}
-              1 min
-              {% else %}
-              {{ words | divided_by:180 }} mins
-              {% endif %}
-              read
-            </p>
-            <h1 class="post-title">{{ page.title }}</h1>
-            {% if page.tags.size > 0 %}
-            <div class="tags">
-              {% for tag in page.tags %}
-                  <a href="/tag/{{ tag }}" class="tag">{{ tag }}</a>
-              {% endfor %}
-            </div>
-            {% endif %}
-          </header>
-          {{content}}
-        </article>
+      <div id="content-inside">
+        <div class="container tight">
+          <article class="post-content">
+            <header>
+              <p class="meta">{{ page.date | date: '%B %d, %Y' }}</p>
+              <h1>{{ page.title }}</h1>
+            </header>
+            {{content}}
+            <br><hr><br>
+            <p>If you have any questions or comments, feel free to reach out on <a href="https://twitter.com/rickwierenga">Twitter</a> or email me directly at rick_wierenga [at] icloud [dot] com.</p>
+          </article>
 
-        <div class="share-twitter">
-            <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}%20via%20@rickwierenga" target="_blank" class="tweet">
-                <i class="fa fa-2x fa-twitter twitter"></i><p>Tweet about this post!</p>
+          <div class="twitter">
+            <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url  | url_encode }}&text={{ page.title }}&via=rickwierenga" target="_blank" class="tweet">
+              <i class="fa fa-2x fa-twitter twitter"></i><p>Share this post!</p>
             </a>
+          </div>
         </div>
-
-        <br>
-        <p>If you have any questions or comments, feel free to reach out on <a href="https://twitter.com/rickwierenga">Twitter</a> or email me directly at rick_wierenga [at] icloud [dot] com.</p>
       </div>
-
-      {% include latest_posts.html %}
     </div>
-    
+
     {% include footer.html %}
   </body>
 </html>

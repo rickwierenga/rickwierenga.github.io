@@ -1,0 +1,80 @@
+---
+---
+
+@import "header";
+@import "footer";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body { height: 100%; }
+
+body {
+    font-family: -apple-system, 
+                BlinkMacSystemFont, 
+                "Segoe UI", 
+                Roboto, 
+                Oxygen-Sans, 
+                Ubuntu, 
+                Cantarell, 
+                "Helvetica Neue", 
+                sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #161616;
+    }
+
+    h1, h2, h3, h4, h5, h6, p, li, a, .MathJax {
+        color: white !important;
+    }
+
+    img {
+        opacity: .75;
+    }
+
+    img:hover {
+        opacity: 1;
+    }
+}
+
+#content {
+    min-height: 100%;
+}
+
+#content-inside {
+    padding-bottom: 100px;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container.tight {
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+}
+
+p, li {
+    margin-bottom: 8px;
+    color: #161616;
+    font-size: 18px;
+    text-align: justify;
+    letter-spacing: 1.1;
+    line-height: 1.5;
+}
+
+a { color: #161616; }
+
+@media (max-width: 800px) {
+    p, li {
+        font-size: 16px;
+        line-height: 1.3;
+    }
+}

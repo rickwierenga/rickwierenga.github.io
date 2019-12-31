@@ -1,94 +1,76 @@
-.navbar {
-    padding: 20px 0;
-    margin-bottom: 30px;
-    background-color: $bg-dark;
-    position: relative;
+#header {
+    background: #11998e;
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);
+    background: linear-gradient(to right, #38ef7d, #11998e);
 
-    hr {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        border-bottom: solid 1px $bg-light;
-    }
+    color: white;
+    padding: 30px 0;
+    margin-bottom: 50px;
 
-    .container {
-        display: flex;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-
-        justify-content: space-between;
-        align-items: center;
-
-        padding: 20px;
-    }
-
-    .title, .subtitle, a {
-        color: white;
-    }
-
-    .title-link {
-        display: table-cell;
+    a {
+        text-decoration: none;
     }
 
     .title {
-        font-size: 1.5em;
-        font-weight: 600;
-        margin-bottom: 8px;
+        color: white;
+
+        h1 {
+            font-weight: bold;
+        }
+
+        h2 {
+            font-weight: 400;
+            font-size: 1.4em;
+        }
     }
 
-    .subtitle {
-        font-size: 1em;
-        font-weight: 400;
-    }
-
-    a.about:hover {
-        color: $accent;
-        text-decoration: underline !important;
-    }
-
-    a:hover {
-        text-decoration: none;
-    }
-
-    .subtitle:hover {
-        text-decoration: none;
+    .title, nav {
+        display: inline-block;
+        vertical-align: middle;
     }
 
     nav {
-        margin-left: auto;
+        float: right;
+    }
 
-        ul {
-            display: table-cell;
-        }
+    nav ul {
+        list-style-type: none;
+        display: table;
 
         li {
             display: inline-block;
+            float: left;
 
             a {
-                font-weight: 800;
-                font-size: 1.3em;
+                display: block;
+                color: white;
+                padding: 8px;
+            }
+
+            #about {
+                font-size: 1.5em;
             }
         }
     }
 }
 
-@media (max-width: 667px) {
-    .navbar {
-        margin-bottom: 0;
-
-        .container {
+@media (max-width: 800px) {
+    #header {
+        .title, nav {
             display: block;
         }
 
         nav {
-            margin-top: 16px;
+            float: inherit;
         }
+    }
+}
 
-        a.about {
-            font-size: 1em;
-            font-weight: 600;
+@media (prefers-color-scheme: dark) {
+    #header {
+        opacity: 0.75;
+        .title {
+            opacity: 1;
         }
     }
 }

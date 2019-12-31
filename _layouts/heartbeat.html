@@ -2,36 +2,25 @@
   <html lang="en">
   <head>
   {% include head.html %}
-  <link rel="stylesheet" href="/assets/stylesheets/external.css">
-  <link rel="stylesheet" href="/assets/stylesheets/latest.css">
+  <link rel="stylesheet" href="/assets/stylesheets/post.css">
   </head>
 
   {% include header.html %}
 
   <body>
     <div id="content">
-      <div class="container">
-        <article class="post-content">
-          <header>
-            <p class="date">
-              {{ page.date | date: '%B %d, %Y' }}
-            </p>
-            <h1 class="post-title">{{ page.title }}</h1>
-            {% if page.tags.size > 0 %}
-            <div class="tags">
-              {% for tag in page.tags %}
-                  <a href="/tag/{{ tag }}" class="tag">{{ tag }}</a>
-              {% endfor %}
-            </div>
-            {% endif %}
-          </header>
-          {{ content }}
-          <div class="link">
-            <a href="{{ page.link }}">Read full story on Heartbeat</a>
-          </div>
-        </article>
+      <div id="content-inside">
+        <div class="container tight">
+          <article class="post-content">
+            <header>
+              <p class="meta">{{ page.date | date: '%B %d, %Y' }}</p>
+              <h1>{{ page.title }}</h1>
+            </header>
+            {{ content }}
+            <a class="read-elsewhere" href="{{ page.link }}">Read full story on Heartbeat</a>
+          </article>
+        </div>
       </div>
-      {% include latest_posts.html %}
     </div>
     {% include footer.html %}
   </body>

@@ -6,54 +6,37 @@ permalink: /
 <html lang="en">
   <head>
     {% include head.html %}
-    <link rel="stylesheet" href="/assets/stylesheets/front_page.css">
+    <link rel="stylesheet" href="/assets/stylesheets/home.css">
   </head>
 
   <body>
     <div id="content">
-      <header>
-          <div>
-            <a href="/" class="title-link">
-                <h1 class="title">Rick Wierenga</h1>
-                <h2 class="subtitle">A blog about whatever interests me.</h2>
-            </a>
-            <nav>
-              <ul>
-                <li><a target="_blank" href="https://twitter.com/rickwierenga"><i class="fa fa-2x fa-twitter-square"></i></a></li>
-                <li><a target="_blank" href="https://www.linkedin.com/in/rick-w-0651b6183/"><i class="fa fa-2x fa-linkedin-square"></i></a></li>
-                <li><a target="_blank" href="mailto:rick_wierenga@icloud.com"><i class="fa fa-2x fa-envelope-square"></i></a></li>
-                <li><a href="/about">about</a></li>
-              </ul>
-            </nav>
-          </div>
-          <hr>
-      </header>
-      <div class="container">
-        <div id="feed">
-          <div class="post-grid">
-            {% for post in site.posts %}
-            <a href="{{ post.url }}" class="card post {{category | first | remove: ' '}}">
+      <div id="content-inside">
+        {% include header.html %}
+        <div class="posts container">
+          {% for post in site.posts %}
+          <a class="post" href="{{ post.url }}">
+            <p>
+              <span>{{ post.date | date_to_string }} &middot;  </span>
+              {% if post.layout == "heartbeat" %}
+              <span>Published on Heartbeat</span>
+              {% else %}
               <span>
-                <p class="info">
-                  <span class="date">{{ post.date | date_to_string }}</span>
-                  &middot;
-                  <span class="reading-time" title="Estimated read time">
-                    {% assign words = post.content | number_of_words %}
-                    {% if words < 180 %}
-                    1 min
-                    {% else %}
-                    {{ words | divided_by:180 }} mins
-                    {% endif %}
-                    read
-                  </span>
-                </p>
-                <h3>{{ post.title }}</h3>
-                <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
-                <p class="read">Read <i class="fa fa-chevron-right"></i></p>
+                {% assign words = post.content | number_of_words %}
+                {% if words < 250 %}
+                1 min
+                {% else %}
+                {{ words | divided_by:250 }} mins
+                {% endif %}
+                read
               </span>
-            </a>
-            {% endfor %}
-          </div>
+            </p>
+            {% endif %}
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.excerpt | strip_html | truncatewords: 100 }}</p>
+          </a>
+          <hr>
+          {% endfor %}
         </div>
       </div>
     </div>
