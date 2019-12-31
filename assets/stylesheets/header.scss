@@ -65,12 +65,3 @@
         }
     }
 }
-
-@media (prefers-color-scheme: dark) {
-    #header {
-        opacity: 0.75;
-        .title {
-            opacity: 1;
-        }
-    }
-}
