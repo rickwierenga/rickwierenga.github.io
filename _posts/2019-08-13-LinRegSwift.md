@@ -1,20 +1,16 @@
 ---
 layout: post
-title: Lesson 13 - Linear Regression in Swift with Tensorflow
-category: fast.ai
+title: Linear Regression in Swift with Tensorflow
+category: Machine Learning
 tags:
-- fastai
+- machinelearning
 ---
 
 Swift is a new programming language introduced by Apple in 2014. Despite being so young compared to other languages, it is already widely used in industry. It is mostly used to develop apps for Apple's platforms. Recently however, after Apple making Swift open source, Swift was ported to linux and now Google is taking an interest in Swift by writing large parts of its deep learning library, TensorFlow, in Swift.
 
 Swift, being the first programming language I learnt, has always been one of my favorite languages. Seeing it being used in deep learning is super exciting to me.
 
-Today I will show you how to get started with Swift for TensorFlow by building a linear regression model using simple linear algebra
-
-The fastai course GitHub 
-
-This is the 13th part of my fastai journey. Read all the posts [here](https://rickwierenga.com/tag/fastai).
+Today I will show you how to get started with Swift for TensorFlow by building a linear regression model using simple linear algebra operations on Swift tensors.
 
 ## Getting started with Swift
 

@@ -1,15 +1,12 @@
 ---
 layout: post
-title: Lesson 12 - Label Smoothing
-category: fast.ai
+title: Label Smoothing
+category: Machine Learning
 tags:
-- fastai
-
+- machinelearning
 ---
 
 Working in machine learning includes dealing with poorly labelled datasets. Very few companies can afford hiring people to label the huge amounts of data required for large scale projects. Luckily, high quality datasets are available for practise projects. In production however, one will most likely need a custom dataset. With applications such as [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) and [Scrapy](https://scrapy.org) it's easy to collect large amounts of data from the internet. Labelling the data is a common pain-point. Luckily there are other solutions available than annotating the data yourself or hiring people to do it for you. Label smoothing is a mathematical technique that helps machine learning models to deal with data where some labels are wrong.
-
-This is the twelfth post of my fast.ai journey. Read all posts [here](https://rickwierenga.com/tag/fastai).
 
 ## The problem with the approach
 

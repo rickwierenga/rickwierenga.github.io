@@ -1,14 +1,12 @@
 ---
 layout: post
-title: Lesson 7 - GANs for Watermark Removal
-category: fast.ai
+title: GANs for Watermark Removal
+category: Machine Learning
 tags:
-- fastai
+- machinelearning
 ---
 
 Generative Adversarial Networks, or GANs, are a new machine learning technique developed by Goodfellow et al. (2014). GANs are generally known as networks that generate new things like images, videos, text, music or nealry any other form of media. This is not the only application of GANs, however. GANs can be used for image reconstruction as well as you’ll see in this post where we’re building a watermark remover tool.
-
-This is the 7th and final lesson of fast.ai part 1. You can read all posts about my journey [here](https://rickwierenga.com/tag/fastai).
 
 ![](/assets/images/7/r2.png)
 

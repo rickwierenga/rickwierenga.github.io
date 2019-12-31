@@ -1,14 +1,12 @@
 ---
 layout: post
-title: Lesson 8 - Numpy vs PyTorch for Linear Algebra
-category: fast.ai
+title: Numpy vs PyTorch for Linear Algebra
+category: Machine Learning
 tags:
-- fastai
+- machinelearning
 ---
 
 Numpy is one of the most popular linear algebra libraries right now. There’s also PyTorch - an open source deep learning framework developed by Facebook Research. While the latter is best known for its machine learning capabilities, it can also be used for linear algebra, just like Numpy.
-
-This is the eighth post about my fast.ai journey. Check out the other posts [here](https://rickwierenga.com/tag/fastai). 
 
 The most important difference between the two frameworks is naming. Numpy calls tensors (high dimensional matrices or vectors) arrays while in PyTorch there’s just called tensors. Everything else is quite similar.
 
