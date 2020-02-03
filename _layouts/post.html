@@ -4,8 +4,6 @@
   {% include head.html %}
   <link href="/assets/stylesheets/emacs.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/stylesheets/post.css">
-
-  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   </head>
 
   {% include header.html %}
@@ -17,7 +15,12 @@
           <article class="post-content">
             <header>
               <p class="meta">{{ page.date | date: '%B %d, %Y' }}</p>
-              <h1>{{ page.title }}</h1>
+              <div class="titles">
+                <h1>{{ page.title }}</h1>
+                {% if page.subtitle != "" %}
+                  <h2>{{ page.subtitle }}</h2>
+                {% endif %}
+            </div>
             </header>
             {{content}}
             <br><hr><br>

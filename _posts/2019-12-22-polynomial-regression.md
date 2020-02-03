@@ -1,7 +1,7 @@
 ---
 layout: post
-title: An introduction to machine learning through polynomial regression
-category: machine learning
+title: Polynomial Regression - ML from the Fundamentals (part 1)
+category: ml-fundamentals
 tags:
   - machinelearning
 ---
@@ -9,8 +9,6 @@ tags:
 Machine learning is one of the hottest topics in computer science today. And not without a reason: it has helped us do things that couldn't be done before like image classification, image generation and natural language processing. But all of it boils down to a really simple concept: you give the computer data and the computer then finds patterns in that data. This is called "learning" or "training", depending on your point of view. These learnt patterns can be extrapolated to make predictions. How? That's what we are looking at today.
 
 By working through a real world example you will learn how to build a polynomial regression model to predict salaries based on job position. Polynomial regression is one of the core concepts that underlies machine learning. I will discuss the mathematical motivations behind each concept. We will also look at _overfitting_ and _underfitting_ and why you want to avoid both.
-
-This tutorial assumes you are familiar with the basics of [linear algebra](https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) and [calculus](https://www.youtube.com/watch?v=WUvTyaaNkzM&list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr).
 
 ## The data
 
@@ -53,7 +51,7 @@ plt.plot(X, y, 'rx')
 
 ## The hypothesis function
 
-To predict output values from input values we use an hypothesis function called $$h$$, paramaterized by $$\theta \in \mathbb{R}^{n+1}$$. We will fit $$h$$ to our datapoints so that it can be extrapolated for new values of $$X$$.
+To predict output values from input values we use an hypothesis function called $$h$$, paramaterized by $$\theta \in \mathbb{R}^{n+1}$$. We will fit $$h$$ to our datapoints so that it can be extrapolated for new values of $$x$$.
 
 $$h_\theta(x) = \theta_0 + \theta_1 x_1$$
 
@@ -63,7 +61,7 @@ $$X = \begin{bmatrix} 1 && 1 \\ 1 && 2 \\ 1 && 3 \\ 1 && 4 \\ 1 && 5 \\ 1 && 6 \
 
 so that
 
-$$h_\theta(x) = \theta^Tx.$$
+$$h_\theta(x) = \theta^Tx$$
 
 Because these $$1$$s change the hypothesis independently from the input $$x$$ it's sometimes called the bias factor. The bias vector is also the reason $$\theta \in \mathbb{R}^{n+1}$$ and not $$\theta \in \mathbb{R}^n$$
 
@@ -80,7 +78,7 @@ As you will probably have noticed $$h$$ is a polynomial of degree $$1$$ while ou
 
 To fix that we will add polynomial features to $$X$$, which, of course, also increases $$n$$.
 
-By inspecting the plot we learn that adding polynomial features like $$(X_j)^2$$ could fit our dataset. Nonpolynomial features like $$\sqrt{X_j}$$ are also allowed, but not used in this tutorial because it's called "An introduction to machine learning through **polynomial regression**."
+By inspecting the plot we learn that adding polynomial features like $$(X_j)^2$$ could fit our dataset. Nonpolynomial features like $$\sqrt{X_j}$$ are also allowed, but not used in this tutorial because it's called "**polynomial** regression."
 
 In this model I added 3 additional polynomials, increasing $$n$$ to $$3$$. 
 
@@ -163,7 +161,9 @@ In my case I had a loss of $$142\ 911\ 368\ 743$$, which may vary slightly as a 
 
 We can improve our model, decrease our loss, by chaning the paramters of $$\theta$$. We do that using an algorithm called gradient descent.
 
-Gradient descent caculates the _gradient_ of a model using the partial derivative of the cost function. This gradient is multiplied by a learning rate, often denoted as $$\alpha$$, to control the pace of learning\*. The result of this multiplication is then substracted from the weights to decrease the loss of further predictions.
+Gradient descent caculates the _gradient_ of a model using the partial derivative of the cost function. This gives the slope of the cost function at our current position ( $\theta$ ) indicating in which direction (gradient) we should move.
+
+This gradient is multiplied by a learning rate, often denoted as $$\alpha$$, to control the pace of learning\*. The result of this multiplication is then substracted from the weights to decrease the loss of further predictions.
 
 Below is a plot of the loss function. The gradient decreases as $$J$$ approaches the minimum. [source](https://www.quora.com/Whats-the-difference-between-gradient-descent-and-stochastic-gradient-descent)
 
@@ -173,15 +173,15 @@ More formally, the partial derivative of $$J$$ with respect to paramters  $$\the
 
 $$\frac{\partial J(\theta)}{\partial \theta_j} = \frac{1}{m}x_j^T(X\theta -y)$$
 
-. In vectorized form for all $$X_j$$
+In vectorized form for all $$X_j$$
 
 $$\nabla J(\theta) = \frac{1}{m}x^T(X\theta -y)$$
 
 The gradient descent step is
 
-$$\theta := \theta - \alpha \nabla J(\theta) = \theta - \alpha \frac{1}{m}X^T(X\theta -y).$$
+$$\theta := \theta - \alpha \nabla J(\theta) = \theta - \alpha \frac{1}{m}X^T(X\theta -y)$$
 
-We repeat this computation very many times. This is called training.
+We repeat this computation many times. This is called **training**.
 
 \*Choosing a value of $$\alpha$$ is an interesting topic on itself so I'm not going to discuss it in this article. If you're interested you can learn more [here](https://heartbeat.fritz.ai/an-empirical-comparison-of-optimizers-for-machine-learning-models-b86f29957050).
 

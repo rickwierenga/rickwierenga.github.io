@@ -7,9 +7,19 @@ p.meta {
 }
 
 article {
+    .titles {
+        margin-bottom: 10px;
+
+        h2 {
+            color: gray;
+            font-size: 1.8em;
+            margin-top: 8px;
+            margin-bottom: 1em;
+        }
+    }
+
     h1 {
         font-size: 3em;
-        margin-bottom: 10px;
     }
 
     h2 {
@@ -49,7 +59,7 @@ article {
         color: #585858;
     }
 
-    .MathJax_Display {
+    .MJXc-display {
         overflow-x: scroll;
     }
 
@@ -68,6 +78,14 @@ article {
     img.inline {
         display: inline;
         width: auto;
+    }
+
+    p > code, li > code {
+        font-family: monospace;
+        font-size: 0.9em;
+        background-color: #cccccc;
+        padding: 2px;
+        border-radius: 3px;
     }
 
     .highlight {
