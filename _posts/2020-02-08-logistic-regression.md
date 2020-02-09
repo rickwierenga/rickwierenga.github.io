@@ -107,16 +107,19 @@ J(\theta) = \begin{cases}
 \end{cases}
 $$
 
-Another motivation for using this loss function over MSE is the way it the way it penalizes the model when it makes wrong predictions.
-
 Let's break that down by looking at a few examples. Suppose we have the label $y^{(i)}$ and the prediction $h_\theta(x^{(i)})$:
 
-* If $y^{(i)} = h_\theta(x^{(i)}) = 0$ we have a loss of $-\log(1 - h_\theta(x)) = -\log(1 - 0) = -\log1 = 0$
-* If $y^{(i)} = h_\theta(x^{(i)}) = 1$ we have a loss of $-\log(h_\theta(x)) = -\log1 = 0$
-* If $y^{(i)} = 0$ but $h_\theta(x^{(i)}) = 1$ we have a loss of $-\log(1 - h_\theta(x)) = -\log(1 - 1) = -\log0 = \infty$
-* If $y^{(i)} = 1$ but $h_\theta(x^{(i)}) = 1$ we have a loss of $-\log(h_\theta(x)) = -\log0 = \infty$
+If $y^{(i)} = h_\theta(x^{(i)}) = 0$ we have a loss of $-\log(1 - h_\theta(x)) = -\log(1 - 0) = -\log1 = 0$
+
+If $y^{(i)} = h_\theta(x^{(i)}) = 1$ we have a loss of $-\log(h_\theta(x)) = -\log1 = 0$
+
+If $y^{(i)} = 0$ but $h_\theta(x^{(i)}) = 1$ we have a loss of $-\log(1 - h_\theta(x)) = -\log(1 - 1) = -\log0 = \infty$
+
+If $y^{(i)} = 1$ but $h_\theta(x^{(i)}) = 1$ we have a loss of $-\log(h_\theta(x)) = -\log0 = \infty$
 
 In general, as the model moves closer to the wrong prediction, the loss gets progressively higher.
+
+Another motivation for using this loss function over MSE is that it pushes the model to be very sure about its predictions. The model will always be penalized, even it if it predicts the correct class, except when it has 100% certainty. For example, let's suppose the model is 51% sure about an example, thus predicting 1, it will still have a loss of $- \log 0.51 \approx 0.67$.
 
 Because we know that $y^{(i)} \in \{0, 1\}$, there's a shorter way of writing this function:
 
