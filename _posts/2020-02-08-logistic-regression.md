@@ -117,9 +117,13 @@ If $y^{(i)} = 0$ but $h_\theta(x^{(i)}) = 1$ we have a loss of $-\log(1 - h_\the
 
 If $y^{(i)} = 1$ but $h_\theta(x^{(i)}) = 1$ we have a loss of $-\log(h_\theta(x)) = -\log0 = \infty$
 
-In general, as the model moves closer to the wrong prediction, the loss gets progressively higher.
+In general, as the model moves closer to the wrong prediction, the loss gets progressively higher. Let's look at the loss of the sigmoid function $g$ with respect to $z$:
 
-Another motivation for using this loss function over MSE is that it pushes the model to be very sure about its predictions. The model will always be penalized, even it if it predicts the correct class, except when it has 100% certainty. For example, let's suppose the model is 51% sure about an example, thus predicting 1, it will still have a loss of $- \log 0.51 \approx 0.67$.
+![losses](/assets/images/log/losses.png)
+
+For $y = 0$, as $z$ approaches $-\infty$, $g(z)$ approaches $0$ so the loss approaches $0$ as well. For $y = 1$, as $z$ approaches $\infty$, $g(z)$ approaches $1$, so the loss approaches $0$.
+
+Another way to understand this is that this loss function pushes the model to be very sure about its predictions. The model will always be penalized, even it if it predicts the correct class, except when it has 100% certainty. For example, let's suppose the model is 51% sure ($h(x) = 0.51$) about an example belonging to class 1, thus predicting class 1, it will still have a loss of $- \log 0.51 \approx 0.67$.
 
 Because we know that $y^{(i)} \in \{0, 1\}$, there's a shorter way of writing this function:
 
