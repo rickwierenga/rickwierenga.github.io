@@ -6,6 +6,7 @@ permalink: /blog/:categories/:title.html
 
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
   - jekyll-seo-tag
 
 sass:
@@ -20,7 +21,7 @@ twitter:
   card: summary
 
 title: Rick Wierenga
-url: rickwierenga.com
+url: "https://rickwierenga.com"
 tagline: A blog about whatever interests me.
 description: A blog about whatever interests me.
 
