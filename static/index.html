@@ -14,10 +14,20 @@ permalink: /
       <div id="content-inside">
         {% include header.html %}
         <div class="posts container">
+          <div class="series">
+            <h2 class="series-header">Series</h2>
+            <div class="blocks">
+              <a class="block mlf" href="/blog/ml-fundamentals">
+                <h2>ML from the Fundamentals</h2>
+                <p>An intuitive, first principals approach to ML.</p>
+              </a>
+            </div>
+          </div>
+
           {% for post in site.posts %}
           <a class="post" href="{{ post.url }}">
-            <p>
-              <span>{{ post.date | date_to_string }} &middot;  </span>
+            <p class="date">
+              <span>{{ post.date | date_to_string }} &middot; </span>
               {% if post.layout == "heartbeat" %}
               <span>Published on Heartbeat</span>
               {% else %}

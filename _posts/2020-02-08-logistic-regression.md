@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Logistic Regression from Scratch in Python
-subtitle: Logistic Regression - ML from the Fundamentals (part 2)
+subtitle: ML from the Fundamentals (part 2)
 category: ml-fundamentals
 tags:
   - machinelearning

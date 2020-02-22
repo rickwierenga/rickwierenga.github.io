@@ -57,23 +57,31 @@ body {
 
 .container.tight {
     width: 80%;
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
+}
+
+h1 {
+    font-weight: 500;
+}
+
+h2, h3, h4, h5, h6 {
+    font-weight: 400;
 }
 
 p, li {
     margin-bottom: 8px;
     color: #161616;
-    font-size: 18px;;
+    font-size: 20px;
     letter-spacing: 1.1;
     line-height: 1.5;
+    font-weight: 300;
 }
 
 a { color: #5874ef; }
 
 @media (max-width: 800px) {
     p, li {
-        font-size: 16px;
         line-height: 1.3;
     }
 }

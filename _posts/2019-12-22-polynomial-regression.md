@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Polynomial Regression from Scratch in Python
-subtitle: Polynomial Regression - ML from the Fundamentals (part 1)
+subtitle: ML from the Fundamentals (part 1)
 category: ml-fundamentals
 tags:
   - machinelearning
