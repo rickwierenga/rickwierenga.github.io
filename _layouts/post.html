@@ -1,9 +1,11 @@
 <!DOCTYPE html>
   <html lang="en">
+
   <head>
-  {% include head.html %}
-  <link href="/assets/stylesheets/emacs.css" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/stylesheets/post.css">
+    {% include head.html %}
+    {% include math.html %}
+    <link href="/assets/stylesheets/emacs.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/stylesheets/post.css">
   </head>
 
   {% include header.html %}
@@ -29,7 +31,7 @@
 
           <div class="twitter">
             <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url  | url_encode }}&text={{ page.title }}&via=rickwierenga" target="_blank" class="tweet">
-              <i class="fa fa-2x fa-twitter twitter"></i><p>Share this post!</p>
+              <i class="fa fa-2x fa-twitter twitter"></i><p>Please share!</p>
             </a>
           </div>
         </div>
