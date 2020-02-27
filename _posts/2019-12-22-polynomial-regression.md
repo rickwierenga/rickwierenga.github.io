@@ -296,18 +296,16 @@ To reduce underfitting you should try adding polynomial features to your dataset
 
 Another technique to reduce overffiting is called _data augmentation_. With data augmentation you can create more training examples, without actively gathering more data which might not even be available. If you were working with images for example, you could try flipping them horizontally or cropping them.
 
+You can view the complete code for this project [here](https://colab.research.google.com/drive/18MpkRiZCEDg0BZgpqrS_3_mQs_0VpQJ4).
+
 ## What's next?
+
+This concludes the first post in the ["ML from the Fundamentals" series](/blog/ml-fundamentals).
 
 Machine learning is not just predicting salaries based on job titles, or even predicting any number based on input data. Predicting values in a continuous space as we've done today is called regression, a form of _supervised learning_ because we had labelled (we know $$y$$) available at training time.
 
 Another form of _supervised learning_ is classification where your goal is to assign a label to an input. For example, classifying images of handwritten digits would be a classification problem.
 
-_Unsupervised learning_ also exists. Grouping items based on similarity, for example. But also recommendation systems like the YouTube algorithm use machine learning under the hood.
+_Unsupervised learning_ is the other major subfield of machine learning. Grouping items based on similarity, for example. But also recommendation systems like the YouTube algorithm use machine learning under the hood.
 
-Here are two great courses if you want to learn more about machine learning:
-
-* [Stanford CS229 Machine Learning](https://www.coursera.org/learn/machine-learning) + [Python Notebooks](https://github.com/rickwierenga/cs229-python)
-* [fast.ai](https://www.fast.ai/)
-* TensorFlow's machine learning curriculum which I lay out in [this thread](https://twitter.com/rickwierenga/status/1196879291063164928).
-
-You can view the complete code for this project [here](https://colab.research.google.com/drive/18MpkRiZCEDg0BZgpqrS_3_mQs_0VpQJ4).
+If you are interested in learning more about machine learning, I recommend you check out the [series page](/blog/ml-fundamentals) where I will post all blog posts in this ongoing series.
