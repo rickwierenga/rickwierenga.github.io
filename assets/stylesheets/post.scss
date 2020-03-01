@@ -23,14 +23,14 @@ article {
     }
 
     h2 {
-        font-size: 1.5em;
+        font-size: 1.6em;
         letter-spacing: -0.2px;
         margin-top: 20px;
         margin-bottom: 6px;
     }
 
     h3 {
-        font-size: 1.3em;
+        font-size: 1.4em;
         letter-spacing: -0.2px;
         margin-top: 10px;
         margin-bottom: 5px;
@@ -117,6 +117,30 @@ article {
         text-align: center;
         color: #161616 !important;
         text-decoration: none;
+    }
+    
+    .tip, .warning, .danger {
+        width: 100%;
+        padding: 12px 8px;
+        border-radius: 4px;
+        font-weight: 500;
+        margin: 12px 0;
+        color: #161616;
+    }
+
+    .tip {
+        background-color: #38ef7d;
+        border: 2px solid green;
+    }
+
+    .warning {
+        background-color: #ffe84f;
+        border: 2px solid #d19600;
+    }
+
+    .danger {
+        background-color: #ff4f4f;
+        border: 2px solid #c70202;
     }
 }
 

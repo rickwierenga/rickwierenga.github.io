@@ -9,9 +9,11 @@ tags:
 
 Classification is one of the biggest problems machine learning explores. Where we used polynomial regression to predict values in a continuous output space, logistic regression is an algorithm for discrete regression, or classification, problems.
 
-This is the second post in my ongoing ["ML from the Fundamentals"](/blog/ml-fundamentals) series. In [the first post](/blog/ml-fundamentals/polynomial-regression.html) I explained polynomial regression problems based on a task to predict the salary of a person given certain aspects of that person. I also discussed basic machine learning terminology. While not strictly required, I recommend you read that post because I use the same notation in this post and I will not reiterate on much of the syntax. [Follow this link](/blog/ml-fundamentals/polynomial-regression.html).
+In [the previous post](/blog/ml-fundamentals/polynomial-regression.html) I explained polynomial regression problems based on a task to predict the salary of a person given certain aspects of that person. I also discussed basic machine learning terminology. In this post I describe logistic regression and classification problems. By working through another example, predicting breast cancer, you will learn how to build your own classification model. I will also cover alternative metrics for measuring the accuracy of a machine learning model.
 
-In this post I describe logistic regression and classification problems. By working through another example, predicting breast cancer, you will learn how to build your own classification model. I will also cover alternative metrics for measuring the accuracy of a machine learning model.
+<div class="warning">
+I recommend you read the previous posts in this series before continuing you continue reading because each post builds upon the previously explained principals. <a href="/blog/ml-fundamentals">Series homepage</a>.
+</div>
 
 ```python
 %pylab inline
