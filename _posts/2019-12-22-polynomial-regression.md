@@ -301,7 +301,7 @@ You can view the complete code for this project [here](https://colab.research.go
 
 This concludes the first post in the ["ML from the Fundamentals" series](/blog/ml-fundamentals).
 
-Machine learning is not just predicting salaries based on job titles, or even predicting any number based on input data. Predicting values in a continuous space as we've done today is called regression, a form of _supervised learning_ because we had labelled (we know $$y$$) available at training time.
+Machine learning is not just predicting salaries based on job titles, or even predicting any number based on input data. Predicting values in a continuous space as we've done today is called regression, a form of _supervised learning_ because we had labelled data (we know $$y$$) available at training time.
 
 Another form of _supervised learning_ is classification where your goal is to assign a label to an input. For example, classifying images of handwritten digits would be a classification problem.
 
