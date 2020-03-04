@@ -12,7 +12,7 @@ Classification is one of the biggest problems machine learning explores. Where w
 In [the previous post](/blog/ml-fundamentals/polynomial-regression.html) I explained polynomial regression problems based on a task to predict the salary of a person given certain aspects of that person. I also discussed basic machine learning terminology. In this post I describe logistic regression and classification problems. By working through another example, predicting breast cancer, you will learn how to build your own classification model. I will also cover alternative metrics for measuring the accuracy of a machine learning model.
 
 <div class="warning">
-I recommend you read the previous posts in this series before continuing you continue reading because each post builds upon the previously explained principals. <a href="/blog/ml-fundamentals">Series homepage</a>.
+I recommend you read the previous posts in this series before continuing you continue reading because each post builds upon the previously explained principles. <a href="/blog/ml-fundamentals">Series homepage</a>.
 </div>
 
 ```python
