@@ -64,6 +64,7 @@ def initialize_K_centroids(X, K):
 ```
 
 Then we write a function to find the closest centroid for each training example. This is the first step of the algorithm. We take `X` and the `centroids` as input and return the the index of the closest centroid for every example in `c`, an m-dimensional vector.
+
 ```python
 def find_closest_centroids(X, centroids):
     m = len(X)
@@ -79,6 +80,7 @@ def find_closest_centroids(X, centroids):
 ```
 
 For the second step of the algorithm, we compute the distance of each example to 'its' centroid and take the average of distance for every centroid $$\mu_k$$. Because we're looping over the rows, we have to transpose the examples.
+
 ```python
 def compute_means(X, idx, K):
     _, n = X.shape
@@ -91,6 +93,7 @@ def compute_means(X, idx, K):
 ```
 
 Finally, we got all the ingredients to complete the K-means algorithm. We set `max_iter`, the maximum number of iterations, to 10. Note that if the centroids aren't moving anymore, we return the results because we cannot optimize any further.
+
 ```python
 def find_k_means(X, K, max_iters=10):
     centroids = initialize_K_centroids(X, K)
@@ -98,9 +101,9 @@ def find_k_means(X, K, max_iters=10):
     for _ in range(max_iters):
         idx = find_closest_centroids(X, centroids)
         centroids = compute_means(X, idx, K)
-        if centroids == previous_centroids:
+        if (centroids == previous_centroids).all():
             # The centroids aren't moving anymore.
-            return centroids, idx
+            return centroids
         else:
             previous_centroids = centroids
 
