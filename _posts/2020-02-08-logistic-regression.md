@@ -181,11 +181,11 @@ One of the only ways we could measure performance of the polynomial regression m
 
 The first one is accuracy: the percentage of examples we correctly predicted the class for.
 
-Implementing this in Python is very easy if we count the number of instances we get correct and divide it by the total number of items:
+Implementing this in Python is very easy if we count the number of instances we get correct and divide it by the total number of items. In mathematical terms, that's equal to the average.
 
 ```python
 preds = h(X, theta)
-((preds > 0.5) == y).sum() / len(y)
+((preds > 0.5) == y).mean()
 ```
 
 We can update the training loop to print out the accuracy and loss every 10 epochs:
@@ -204,11 +204,7 @@ for i in range(100):
   hist['loss'].append(loss)
 
   # acc
-  c = 0
-  for j in range(len(y)):
-    if (h(X[j], theta) > .5) == y[j]:
-      c += 1
-  acc = c / len(y)
+  acc = ((h(X, theta) > .5) == y).mean()
   hist['acc'].append(acc)
 
   # print stats
