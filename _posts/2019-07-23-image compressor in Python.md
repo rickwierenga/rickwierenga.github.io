@@ -172,3 +172,5 @@ To get a better intuition for this algorith, you should try out different values
 As you've seen in this tutorial, it's quite easy to reduce the file size of an image using unsupervised machine learning.
 
 Check out the finished program on [GitHub](https://github.com/rickwierenga/PythonImageCompressor/).
+
+<p class="text-muted">Thanks to Daniel Hess for reporting an error in this post.</p>
