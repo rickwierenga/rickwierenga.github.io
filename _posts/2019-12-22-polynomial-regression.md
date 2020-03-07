@@ -295,7 +295,7 @@ To reduce underfitting you should try adding polynomial features to your dataset
 
 Another technique to reduce overffiting is called _data augmentation_. With data augmentation you can create more training examples, without actively gathering more data which might not even be available. If you were working with images for example, you could try flipping them horizontally or cropping them.
 
-You can view the complete code for this project [here](https://colab.research.google.com/drive/18MpkRiZCEDg0BZgpqrS_3_mQs_0VpQJ4).
+You can view the complete code for this project [here](https://github.com/rickwierenga/MLFundamentals/blob/master/1_Polynomial_Regression.ipynb).
 
 ## What's next?
 
