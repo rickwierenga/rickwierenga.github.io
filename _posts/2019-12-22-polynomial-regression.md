@@ -15,6 +15,8 @@ By working through a real world example you will learn how to build a polynomial
 
 The first thing to always do when starting a new machine learning model is to load and inspect the data you are working with. As I mentioned in the introduction we are trying to predict the salary based on job prediction. To do so we have access to the following dataset:
 
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQZ9sDZaTdJGBoCWlLB2B-Soiwhx3zf3mHxySGLieZsS_yTbdzb2vbcqtq1XtkHtOgFvWQNJpYsNpuj/pubhtml?gid=1079365787&single=true&widget=true&headers=false"></iframe>
+
 As you can see we have three columns: position, level and salary. Position and level are the same thing, but in different representation. Because it's easier for computers to work with numbers than text we usually map text to numbers.
 
 In this case the levels are the _input data_ to the model. While we the numbers are already known, the salary is the _output data_. With this data we will build a model at _training time_, where both are available. At _inference time_, we will only have input data. Our job as machine learning engineers is to build a model that outputs good data at _inference time_.
@@ -29,7 +31,7 @@ $$X = \begin{bmatrix} 1 \\ 2 \\ 3 \\ 4 \\ 5 \\ 6 \\ 7 \\ 8 \\ 9 \\10 \end{bmatri
 
 Of course
 
-$$\left \lVert y  \right\rVert = m$$
+$$\left \lVert y \right \rVert = m$$
 
 In Python:
 
@@ -83,7 +85,12 @@ By inspecting the plot we learn that adding polynomial features like $(X_j)^2$ c
 In this model I added 3 additional polynomials, increasing $n$ to $3$. 
 
 ```python
-X = np.hstack((X, (X[:, 1] ** 2).reshape((m, 1)), (X[:, 1] ** 3).reshape((m, 1)), (X[:, 1] ** 4).reshape((m, 1)))); X
+X = np.hstack((
+    X,
+    (X[:, 1] ** 2).reshape((m, 1)),
+    (X[:, 1] ** 3).reshape((m, 1)),
+    (X[:, 1] ** 4).reshape((m, 1))
+))
 ```
 
 You should try adding or removing polynomial features yourself.
