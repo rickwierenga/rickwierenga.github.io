@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="/assets/stylesheets/post.css">
   </head>
 
-  {% include header.html %}
-
   <body>
+    {% include header.html %}
     <div id="content">
       <div id="content-inside">
         <div class="container tight">
@@ -21,7 +20,7 @@
                 {% if page.subtitle != "" %}
                   <h2>{{ page.subtitle }}</h2>
                 {% endif %}
-            </div>
+              </div>
             </header>
             {{content}}
             <h2>Thanks for reading</h2>
