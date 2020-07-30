@@ -49,7 +49,7 @@ Then for a certain number of iterations, execute the following steps:
 As the algorithm progresses, generally the centroids will move to the center of the clusters and the overall distance of the examples to the clusters gets smaller.
 
 ## K-means for image compression
-This technique can also be used for image compression. Each pixel of the image consists of three values, R(ed), B(lue) and G(reen). Those can be seen as the points on the grid, in 3D in case of RGB. The objective of image compression in this case is to reduce the number of colors by taking the average $$K$$ colors that look closest to the original image. An image with fever colors takes up less disk space, which is what we want.
+This technique can also be used for image compression. Each pixel of the image consists of three values, R(ed), B(lue) and G(reen). Those can be seen as the points on the grid, in 3D in case of RGB. The objective of image compression in this case is to reduce the number of colors by taking the average $$K$$ colors that look closest to the original image. An image with fewer colors takes up less disk space, which is what we want.
 
 Compressing the image can also be a preprocessing step to another algorithm. Reducing the size of the input data generally speeds up learning.
 
