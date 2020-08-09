@@ -114,6 +114,7 @@ def find_k_means(X, K, max_iters=10):
 In case you've never worked with Pillow before, don't worry. The api is very easy.
 
 We start by trying to open the image, which is defined as the first (and last) command line argument like so:
+
 ```python
 try:
     image_path = sys.argv[1]
@@ -122,7 +123,17 @@ except (IndexError, AssertionError):
     print('Please specify an image')
 ```
 
-Because we want to get the raw image data, eg the rgb values for each pixel, we create a numpy from the image just like this:
+Pillow gives us an `Image` object, but our algorithm requires a NumPy array. So let's define a little helper function to convert them. Notice how each value is divided by 255 to scale the pixels to 0...1 (a good ML practice).
+
+```
+def load_image(path):
+    """ Load image from path. Return a numpy array """
+    image = Image.open(path)
+    return np.asarray(image) / 255
+```
+
+Here's how to use that:
+
 ```python
 image = load_image(image_path)
 w, h, d = image.shape
