@@ -125,7 +125,7 @@ except (IndexError, AssertionError):
 
 Pillow gives us an `Image` object, but our algorithm requires a NumPy array. So let's define a little helper function to convert them. Notice how each value is divided by 255 to scale the pixels to 0...1 (a good ML practice).
 
-```
+```python
 def load_image(path):
     """ Load image from path. Return a numpy array """
     image = Image.open(path)
