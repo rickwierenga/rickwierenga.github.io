@@ -315,3 +315,7 @@ Another form of _supervised learning_ is classification where your goal is to as
 _Unsupervised learning_ is the other major subfield of machine learning. Grouping items based on similarity, for example. But also recommendation systems like the YouTube algorithm use machine learning under the hood.
 
 If you are interested in learning more about machine learning, I recommend you check out the [series page](/blog/ml-fundamentals) where I will post all blog posts in this ongoing series.
+
+<div class="warning">
+If you liked this post, you will probably also like <a href="https://gettingstarted.ml?s=rw">gettingstarted.ml</a>: an open source list of the best courses, books, papers, and more to quickly get started with ML.
+</div>

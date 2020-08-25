@@ -290,3 +290,7 @@ This was the second post of the ["ML from the Fundamentals"](/blog/ml-fundamenta
 ## Sources
 
 [1] Dheeru Dua en Casey Graff. UCI Machine Learning Repository. 2017. url: http://archive.ics.uci.edu/ml.
+
+<div class="warning">
+If you liked this post, you will probably also like <a href="https://gettingstarted.ml?s=rw">gettingstarted.ml</a>: an open source list of the best courses, books, papers, and more to quickly get started with ML.
+</div>

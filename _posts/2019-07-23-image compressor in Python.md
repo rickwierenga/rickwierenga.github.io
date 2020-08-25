@@ -185,3 +185,7 @@ As you've seen in this tutorial, it's quite easy to reduce the file size of an i
 Check out the finished program on [GitHub](https://github.com/rickwierenga/PythonImageCompressor/).
 
 <p class="text-muted">Thanks to Daniel Hess for reporting an error in this post.</p>
+
+<div class="warning">
+If you liked this post, you will probably also like <a href="https://gettingstarted.ml?s=rw">gettingstarted.ml</a>: an open source list of the best courses, books, papers, and more to quickly get started with ML.
+</div>
