@@ -7,7 +7,7 @@ If you want to have this repository running locally for some reason, you'll firs
 
 ## License
 
-The contents of this repository, including but not limited to images and prose, are licensed under the Creative Commons Attribution Share Alike 4.0 International license, with the exception of parts of the content of which the copyright is owned by other parties. See [LICENSE](/LICENSE) for details.
+The contents of this repository, including but not limited to images and prose, are licensed under the Creative Commons Attribution 4.0 International license, with the exception of parts of the content of which the copyright is owned by other parties. See [LICENSE](/LICENSE) for details.
 
 ---
 
