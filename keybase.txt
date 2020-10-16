@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/rickwierenga
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://rickwierenga.com
+  * I am rickwierenga (https://keybase.io/rickwierenga) on keybase.
+  * I have a public key ASAkU1wNIrNLPYFbhssi8Vh5kkrEOrxsapKJrH9Hfh2mLAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012024535c0d22b34b3d815b86cb22f15879924ac43abc6c6a9289ac7f477e1da62c0a",
+      "host": "keybase.io",
+      "kid": "012024535c0d22b34b3d815b86cb22f15879924ac43abc6c6a9289ac7f477e1da62c0a",
+      "uid": "78e90a2728a88f77f2397ac802437e19",
+      "username": "rickwierenga"
+    },
+    "merkle_root": {
+      "ctime": 1602856653,
+      "hash": "43f30de68ac8654ca9828295c820232d77865431dd63252bc1075f1d319b4876434bf55977e9a0c4fad9fbb17ce6973d14dd27a8bf63da680816d59d43a47edb",
+      "hash_meta": "c7e3d22dc545ab94dc495859f98485b64121949d155d691d5e349c2df4772829",
+      "seqno": 17844183
+    },
+    "service": {
+      "entropy": "OfSKpS+AU/Aglf/k52hMpoiO",
+      "hostname": "rickwierenga.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.0"
+  },
+  "ctime": 1602856679,
+  "expire_in": 504576000,
+  "prev": "58ec1e1685c1ac08b6add3c8023ed44d29f236a6b0f60cc6098b8ce8cc66f5cb",
+  "seqno": 10,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgJFNcDSKzSz2BW4bLIvFYeZJKxDq8bGqSiax/R34dpiwKp3BheWxvYWTESpcCCsQgWOweFoXBrAi2rdPIAj7UTSnyNqaw9gzGCYuM6Mxm9cvEILG7NXFbkRFOdEUX3s83IbdDJiaLWpJt2YTHb2vpANn/AgHCo3NpZ8RA7Rad7f7XBTYsjd2ZDqGYufKIMp0p4gYkYiYyMIazJqJ1VB3HsOn/32IMRnybbfhUdRUKDqaPs1przrR9Rkv3DqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIC4x0VxWu/95ikGrvM/LGP7pKX0YBcnSYI5AEa1yWG3so3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/rickwierenga
+
+==================================================================
